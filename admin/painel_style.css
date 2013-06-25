@@ -1,0 +1,61 @@
+/*Reset*/
+*{margin:0;padding:0;}
+body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7;}
+#box{width:1024px;margin:0 auto;}
+
+/*Header*/
+
+#header{height:144px;border-bottom:5px solid #FFCC00;  margin-bottom:7px;}
+#header_logo{float:left;margin:0px 0 0 0;}
+#header_banner{width:728px;height:90px;padding:3px;border:1px solid #666;float:right;margin:0px 0 0 0; background-color:#FFF;}
+
+#local{width:1024px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;font-variant:normal;float:left; padding:5px;}
+#local .caminho{float:left;}
+#local .welcome{float:right;}
+
+/*Corpo*/
+#content{width:1024px;margin-top:5px;}
+#content_menu{width:195px;border:1px solid #666;background:#FFF; margin:0 5px 0 0;float:left; padding:5px;}
+#content_menu ul{list-style:none; margin:5px;padding:0; float:left;}
+#content_menu ul li{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:10px 0 3px 0; float:left;}
+#content_menu ul li a{text-decoration:none; color:#666;float:left;width:180px; border-bottom:1px dotted #CCC;}
+#content_menu ul .titulo{padding:5px; background:#346700; float:left;width:175px;color:#FFF;font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold;}
+#content_menu ul li a:hover{color:#336600;text-decoration:underline; font-weight:bold;}
+
+
+#content_conteudo{width:795px;border:1px solid #666;background:#fff;float:right;padding:5px;}
+#content_conteudo h1{ font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
+#content_conteudo h2{ font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
+#content_conteudo h3{ font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
+#content_conteudo .ok{ padding:5px;background:#FFCC00;font-weight:bold;color:#346700;border:1px solid #FFF;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#content_conteudo .no{ padding:5px;background:#C00; color:#FFF;border:1px solid #FFF; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif}
+#content_conteudo p {font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333; margin:10px 0;}	
+
+#content_conteudo .carregando{ padding:5px;background:#FFCC00;text-align:center;color:#346700;border:1px solid #FFF; 
+								font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+								
+#content_conteudo .error{ font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; color:#F00; padding:4px;}
+#content_conteudo form{ background:#F7F7F7;padding:5px;}
+#content_conteudo .form1{ background:#F7F7F7;padding:5px;}
+#content_conteudo fieldset{ border:none;padding:5px;}
+#content_conteudo legend {font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700;}
+#content_conteudo label{display:block;margin:5px 0;}
+#content_conteudo span{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700; display:block;}
+#content_conteudo input{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
+#content_conteudo textarea{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
+#content_conteudo select{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#666;padding:5px;}
+#content_conteudo .btn{padding:0;margin:0; background:#F7F7F7}
+#content_conteudo a{font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700;}
+#content_conteudo a:hover{color:#FFCC00;}
+#content_conteudo .inbox a{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;color:blue;font-weight:bold;text-decoration:none;}
+#content_conteudo .inbox a:hover{text-decoration:underline;}
+#content_conteudo .exibir {width:100px;height:60px;overflow:hidden;}
+#content_conteudo .titulo {margin-right:55px; float:right;font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; background:#346700;color:#FFF;font-weight:normal;}
+#content_conteudo .galeria {width:800px;float:left;}
+#content_conteudo .galeria_cadastro{width:120px;text-align:center;padding:10px;background:#F7F7F7;margin:9px; float:left;}
+#content_conteudo .galeria_cadastro form{width: auto;background:none; height:32px;}
+#content_conteudo .galeria_cadastro .imagem{width:100px;overflow:hidden; margin: 0 auto;}
+
+
+/*Footer*/
+#footer{width:1012px;padding:5px;border:1px solid #666;background:#FFF;float:left;margin-top:5px; text-align:center;color:#346700;}

@@ -1,0 +1,25 @@
+*{margin:0;padding:0;}
+body{background-color:#F7F7F7;}
+
+#login{width:512px; height:451px; margin:80px auto;background:url(imagens/login_bg.png) no-repeat;}
+
+#login img{margin:40px 0 0 28px;}
+#login form{margin:20px 0 0 67px;}
+#login label{display:block;	margin: 0 0 5px 0;}
+#login span{font:20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
+#login input{color:#666; border:1px solid #669900; padding:5px;	width:290px; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
+#login input:hover{border:2px groove #669900}
+#login .btn{border:1px solid #346700 ;background:#346700; color:#FFF; width:100px; display:block;float:right; margin:5px 78px 0 0; cursor: pointer;}
+#login .btn:hover{color:#FC0; background:#346700;border:1px solid #FC0}
+#login p a{float:left; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700; text-decoration:none; margin-top:12px;}
+#login p a:hover{font-weight:bold;}
+#login .envie{width:359px; display:block; font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:5px; margin-bottom:5px; background-color:#346700; color:#fff;}
+#login .alertas{display:block;width:389px;float:left;margin-top:60px;padding:5px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#333;font-weight:bold; border:2px solid #FFF; margin-left:67px;background-color:#FC0;}
+#login .alertas_2{display:block;width:319px;float:left;margin-top:60px;padding:5px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#333;font-weight:bold; border:2px solid #FFF; margin-left:67px;background:#FFA6A6; border:1px solid #333;}
+
+#login .restrito{width:359px; display:block; font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:5px;margin:20px 0 0 65px;  color:#346700;}
+#login .link{ margin:15px 80px;}
+#login .link a{padding:5px;text-decoration:none; color:#FFF; border:1px solid #FC0; background:#346700; width:100px;}
+#login .link a:hover{color:#FC0; background:#346700;}
+
+
