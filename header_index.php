@@ -1,3 +1,10 @@
+<?php
+// *** Validate request to login to this site.
+if (!isset($_SESSION)) {
+ session_start();
+
+?>
+
 <?php require_once('Connections/painel_config.php'); ?>
 <?php
 if (!function_exists("GetSQLValueString")) {
@@ -34,9 +41,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 <?php
 // *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
+//if (!isset($_SESSION)) {
+ // session_start();
+//
 
 $loginFormAction = $_SERVER['PHP_SELF'];
 if (isset($_GET['accesscheck'])) {
