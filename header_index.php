@@ -102,7 +102,7 @@ if (isset($_POST['email'])) {
             	<div id="header_topo_logo"> <!-- Inicio Div Header Topo Logo -- <label> Atendimento Gado Online: contato@portaldogado.com.br  | <a href="admin/index.php"><strong> Entrar</strong> </a>   </label> -->                 
 	                 <div id="header_contato">
     	             		
-                        <form action="<?php echo $loginFormAction; ?>" name="login"  method="POST">
+                        <form action="<?php if($loginFormAction != ''){echo $loginFormAction;} ?>" name="login"  method="POST">
                                 <label><span> E-mail:</span> <input type="text" name="email"/> </label>
                                 <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
                                 <input type="submit" name="logar" value="Logar" class="btn" />
