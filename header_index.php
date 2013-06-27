@@ -1,5 +1,6 @@
-<?php 
-	header("Location: ". $MM_restrictGoTo); 
+
+
+<?php 	
 	require_once('Connections/painel_config.php');
 ?>
 
@@ -39,47 +40,48 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 <?php
 // *** Validate request to login to this site.
-
-if (!isset($_SESSION)) {
-  session_start();
-}
-
-$loginFormAction = $_SERVER['PHP_SELF'];
-if (isset($_GET['accesscheck'])) {
-  $_SESSION['PrevUrl'] = $_GET['accesscheck'];
-}
-
-if (isset($_POST['email'])) {
-  $loginUsername=$_POST['email'];
-  $password=md5($_POST['senha']);
-  $MM_fldUserAuthorization = "usuarioNivel";
-  $MM_redirectLoginSuccess = "admin/painel.php";
-  $MM_redirectLoginFailed = "admin/erro.php";
-  $MM_redirecttoReferrer = false;
-  mysql_select_db($database_painel_config, $painel_config);
-  	
-  $LoginRS__query=sprintf("SELECT email, senha, usuarioNivel FROM portal_cliente WHERE email=%s AND senha=%s",
-  GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
-   
-  $LoginRS = mysql_query($LoginRS__query, $painel_config) or die(mysql_error());
-  $loginFoundUser = mysql_num_rows($LoginRS);
-  if ($loginFoundUser) {
-    
-    $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
-    
-	if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
-    //declare two session variables and assign them
-    $_SESSION['MM_Username'] = $loginUsername;
-    $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
-
-    if (isset($_SESSION['PrevUrl']) && false) {
-      $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
-    }
-    header("Location: " . $MM_redirectLoginSuccess );
-  }
-  else {
-    header("Location: ". $MM_redirectLoginFailed );
-  }
+if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
+		if (!isset($_SESSION)) {
+		  session_start();
+		}
+		
+		$loginFormAction = $_SERVER['PHP_SELF'];
+		if (isset($_GET['accesscheck'])) {
+		  $_SESSION['PrevUrl'] = $_GET['accesscheck'];
+		}
+		
+		if (isset($_POST['email'])) {
+		  $loginUsername=$_POST['email'];
+		  $password=md5($_POST['senha']);
+		  $MM_fldUserAuthorization = "usuarioNivel";
+		  $MM_redirectLoginSuccess = "admin/painel.php";
+		  $MM_redirectLoginFailed = "admin/erro.php";
+		  $MM_redirecttoReferrer = false;
+		  mysql_select_db($database_painel_config, $painel_config);
+			
+		  $LoginRS__query=sprintf("SELECT email, senha, usuarioNivel FROM portal_cliente WHERE email=%s AND senha=%s",
+		  GetSQLValueString($loginUsername, "text"), GetSQLValueString($password, "text")); 
+		   
+		  $LoginRS = mysql_query($LoginRS__query, $painel_config) or die(mysql_error());
+		  $loginFoundUser = mysql_num_rows($LoginRS);
+		  if ($loginFoundUser) {
+			
+			$loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
+			
+			if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
+			//declare two session variables and assign them
+			$_SESSION['MM_Username'] = $loginUsername;
+			$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
+		
+			if (isset($_SESSION['PrevUrl']) && false) {
+			  $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
+			}
+			header("Location: " . $MM_redirectLoginSuccess );
+		  }
+		  else {
+			header("Location: ". $MM_redirectLoginFailed );
+		  }
+		}
 }
 ?>
 
@@ -108,7 +110,7 @@ if (isset($_POST['email'])) {
            <form action="<?php echo $loginFormAction;?>" name="login"  method="POST">
                 <label><span> E-mail:</span> <input type="text" name="email"/> </label>
                 <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
-                <input type="submit" name="logar" value="Logar" class="btn" />
+                <input type="submit" name="logar" id="logar" value="Logar" class="btn" />
                 <p> <a href="admin/recover.php">[Esqueci minha senha] </a></p>
             </form>
 			</div>
