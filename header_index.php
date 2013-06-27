@@ -141,6 +141,10 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 // *** Validate request to login to this site.
 if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
+
+		if(strpos($_SERVER['HTTP_USER_AGENT'],"MSIE")) { 
+  			session_cache_limiter('public'); 
+		} 
 		if (!isset($_SESSION)) {
 		  session_start();
 		}
