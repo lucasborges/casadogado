@@ -40,9 +40,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 <?php
 // *** Validate request to login to this site.
 
-//if (!isset($_SESSION)) {
-  //session_start();
-//}
+if (!isset($_SESSION)) {
+  session_start();
+}
 
 $loginFormAction = $_SERVER['PHP_SELF'];
 if (isset($_GET['accesscheck'])) {
@@ -85,9 +85,9 @@ if (isset($_POST['email'])) {
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<?php if (!isset($_SESSION)) {
+<?php 
   session_start();
-}?>
+?>
 <head>
 <?php include"Connections/config.php";?>
 <?php include"js/scripts.php";?>
