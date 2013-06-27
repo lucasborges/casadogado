@@ -145,6 +145,7 @@ if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
 		if(strpos($_SERVER['HTTP_USER_AGENT'],"MSIE")) { 
   			session_cache_limiter('public'); 
 		} 
+		ob_start();
 		if (!isset($_SESSION)) {
 		  session_start();
 		}
@@ -168,23 +169,24 @@ if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
 		   
 		  $LoginRS = mysql_query($LoginRS__query, $painel_config) or die(mysql_error());
 		  $loginFoundUser = mysql_num_rows($LoginRS);
-		  if ($loginFoundUser) {
+		  if ($loginFoundUser){
+			  $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');			
+				if (PHP_VERSION >= 5.1) {
+					session_regenerate_id(true);
+				} else {
+					session_regenerate_id();
+				}
+				//declare two session variables and assign them
+				$_SESSION['MM_Username'] = $loginUsername;
+				$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
 			
-			$loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
-			
-			if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
-			//declare two session variables and assign them
-			$_SESSION['MM_Username'] = $loginUsername;
-			$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
-		
-			if (isset($_SESSION['PrevUrl']) && false) {
-			  $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
-			}
-			header("Location: " . $MM_redirectLoginSuccess );
-		  }
-		  else {
+				if (isset($_SESSION['PrevUrl']) && false) {
+				  $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
+				}
+				header("Location: " . $MM_redirectLoginSuccess );
+		} else {
 			header("Location: ". $MM_redirectLoginFailed );
 		  }
-		}
+	}
 }
 ?>
