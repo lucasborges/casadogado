@@ -458,6 +458,7 @@
 	
 	#pagina{width:969px; margin-left:115px;float:left; border:0px solid red;}
 	
+	#pagina .error{ font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; color:#F00; padding:4px;}
 		
 	#pagina anuncie h2{font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; 
 					color:#666;				

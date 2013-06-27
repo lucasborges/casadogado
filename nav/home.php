@@ -55,21 +55,21 @@
             	<h7>Ofertas em Destaque</h7>
                 
                  <ul class="lista_um">
-                     <?php portal_homePosts();?>                   
+                     <?php //portal_homePosts();?>   
            		</ul> <!--fim Lista Um-->
                 
                  <ul class="lista_um">
-                    <?php portal_homePosts2();?>
+                    <?php //portal_homePosts2();?>
            		</ul> <!--fim Lista Um-->
                 
                  <ul class="lista_um">
-                     <?php portal_homePosts3();?>
+                     <?php //portal_homePosts3();?>
            		</ul> <!--fim Lista Um-->
                 
                 <h7>Anúncios em Oferta</h7>
                 <!-- Inicio Lista Dois -->
                 <ul class="lista_dois">
-                    <?php portal_homePostFooter();?>
+                    <?php //portal_homePostFooter();?>
                 </ul>  
                 <!-- Fim Lista Dois -->             
                 

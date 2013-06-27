@@ -101,14 +101,13 @@ if (isset($_POST['email'])) {
 	       <div id="header_topo"> <!-- Inicio Div Header_topo-->            
             	<div id="header_topo_logo"> <!-- Inicio Div Header Topo Logo -- <label> Atendimento Gado Online: contato@portaldogado.com.br  | <a href="admin/index.php"><strong> Entrar</strong> </a>   </label> -->                 
 	                 <div id="header_contato">
-    	             		
-                        <form action="<?php if($loginFormAction != ''){echo $loginFormAction;} ?>" name="login"  method="POST">
-                                <label><span> E-mail:</span> <input type="text" name="email"/> </label>
-                                <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
-                                <input type="submit" name="logar" value="Logar" class="btn" />
-                                <p> <a href="admin/recover.php">[Esqueci minha senha] </a></p>
-                            </form>
-        	         </div>
+           <form action="<?php if(isset($loginFormAction)){echo $loginFormAction;} ?>" name="login"  method="POST">
+                <label><span> E-mail:</span> <input type="text" name="email"/> </label>
+                <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
+                <input type="submit" name="logar" value="Logar" class="btn" />
+                <p> <a href="admin/recover.php">[Esqueci minha senha] </a></p>
+            </form>
+			</div>
                  
             	    <a href="index.php?pg=home.php"><img src="images/portaldogado_logo.png" alt="Home" title="Home" border="0"/></a>
                     
