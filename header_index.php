@@ -39,9 +39,10 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 
 <?php
 // *** Validate request to login to this site.
-if (!isset($_SESSION)) {
-  session_start();
-}
+
+//if (!isset($_SESSION)) {
+  //session_start();
+//}
 
 $loginFormAction = $_SERVER['PHP_SELF'];
 if (isset($_GET['accesscheck'])) {
@@ -84,6 +85,9 @@ if (isset($_POST['email'])) {
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!isset($_SESSION)) {
+  session_start();
+}?>
 <head>
 <?php include"Connections/config.php";?>
 <?php include"js/scripts.php";?>
@@ -101,7 +105,7 @@ if (isset($_POST['email'])) {
 	       <div id="header_topo"> <!-- Inicio Div Header_topo-->            
             	<div id="header_topo_logo"> <!-- Inicio Div Header Topo Logo -- <label> Atendimento Gado Online: contato@portaldogado.com.br  | <a href="admin/index.php"><strong> Entrar</strong> </a>   </label> -->                 
 	                 <div id="header_contato">
-           <form action="<?php if(isset($loginFormAction)){echo $loginFormAction;} ?>" name="login"  method="POST">
+           <form action="<?php echo $loginFormAction;?>" name="login"  method="POST">
                 <label><span> E-mail:</span> <input type="text" name="email"/> </label>
                 <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
                 <input type="submit" name="logar" value="Logar" class="btn" />
