@@ -145,7 +145,7 @@ if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
 		if(strpos($_SERVER['HTTP_USER_AGENT'],"MSIE")) { 
   			session_cache_limiter('public'); 
 		} 
-		ob_start();
+		session_id();
 		if (!isset($_SESSION)) {
 		  session_start();
 		}
