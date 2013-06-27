@@ -1,9 +1,8 @@
 <?php
-
-define('HOST','localhost');
-define('DB','portaldogado');
-define('USER','root');
-define('PASS','');
+define('HOST','mysql.casadogado.com.br');
+define('DB','casadogado_www');
+define('USER','casadogado');
+define('PASS','1q2w3e4r');
 $conexao = 'mysql:host='.HOST.';dbname='.DB;
 
 try{

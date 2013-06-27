@@ -24,4 +24,4 @@ foreach ($_REQUEST as $___opt => $___val) {
 ?>
 
 
-<?php include_once("footer.php")?>
+<?php include_once("footer.php");?>
