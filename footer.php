@@ -1,5 +1,4 @@
- <!-- Inicio div Footer -->   
-    <div id="footer">
+    <div id="footer">  <!-- Inicio div Footer -->   
     	<img src="images/telefone.png"/>
         <h1>  Atendimento Gado Online: (34) 9996-3430 / (34) 9993-1900 / contato@portaldogado.com.br</h1>
         <div id="footer_bottom">      <!-- Inicio div Footer Bottom -->   

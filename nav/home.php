@@ -76,4 +76,3 @@
             </div> <!-- Fim Div Conteudo Direito-->
             	<label> <a href="#"> VER MAIS OFERTAS >> </a></label>
         </div><!-- FIM Div Conteudo -->
-        

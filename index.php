@@ -1,8 +1,8 @@
 <?php 
-foreach ($_REQUEST as $___opt => $___val) {
-  $$___opt = $___val;
-}
-
+	foreach ($_REQUEST as $___opt => $___val) {
+  		$$___opt = $___val;
+	}
+	
 	if(empty($pg) or $pg =="home.php"){
 		include_once("header_index.php");
     } else {
@@ -19,8 +19,5 @@ foreach ($_REQUEST as $___opt => $___val) {
 	else {
 		include("nav/$pg");	
 	}
-
 ?>
-
-
 <?php include_once("footer.php");?>

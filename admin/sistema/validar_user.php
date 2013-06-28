@@ -8,8 +8,8 @@
 		$querySistema_usuarioSistema->execute();
 		$resultado_querySistema = $querySistema_usuarioSistema->fetchAll(PDO::FETCH_ASSOC);
 		}catch(PDOexception $error_usuarioSistema){
-			//echo 'Erro ao selecionar o usuário';
-			//echo '<meta http-equiv="refresh" content="2, deslogar.php"/>';
+			echo 'Erro ao selecionar o usuário';
+			echo '<meta http-equiv="refresh" content="2, deslogar.php"/>';
 		}
 		
 		foreach($resultado_querySistema as $res_UsuarioSistema);

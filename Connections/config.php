@@ -4,12 +4,10 @@ define('DB','casadogado_www');
 define('USER','casadogado');
 define('PASS','1q2w3e4r');
 $conexao = 'mysql:host='.HOST.';dbname='.DB;
-
 try{
 		$conecta = new PDO($conexao,USER,PASS);
 		$conecta->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		}catch(PDOexception $error_conecta){
 		echo('Erro ao conectar favor informe no email contato@portaldogado.com.br');
 	}
-
 ?>
