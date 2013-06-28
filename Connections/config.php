@@ -10,4 +10,3 @@ try{
 		}catch(PDOexception $error_conecta){
 		echo('Erro ao conectar favor informe no email contato@casadogado.com.br');
 	}
-?>
