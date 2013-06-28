@@ -137,14 +137,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 ?>
 
 <?php
-		// *** Validate request to login to this site.
-		if(strpos($_SERVER['HTTP_USER_AGENT'],"MSIE")) { 
-  			session_cache_limiter('public'); 
-		} 
-		
-		session_id();
-		ob_start();
-		
 		if (!isset($_SESSION)) {
 		  session_start();
 		}
