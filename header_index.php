@@ -142,6 +142,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   			session_cache_limiter('public'); 
 		} 
 		
+		session_id();
+		ob_start();
+		
 		if (!isset($_SESSION)) {
 		  session_start();
 		}

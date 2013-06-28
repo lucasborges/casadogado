@@ -1,4 +1,6 @@
 <?php
+	session_id();
+	ob_start();
 if (!isset($_SESSION)) {
   session_start();
 }
