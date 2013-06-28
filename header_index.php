@@ -4,6 +4,7 @@
 <?php include"Connections/config.php";?>
 <?php include"js/scripts.php";?>
 <?php include"funcoes/funcoes.php";?>
+<?php require_once('Connections/painel_config.php');?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
@@ -136,16 +137,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 ?>
 
 <?php
-
-	require_once('Connections/painel_config.php');
-
-// *** Validate request to login to this site.
-if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
-
+		// *** Validate request to login to this site.
 		if(strpos($_SERVER['HTTP_USER_AGENT'],"MSIE")) { 
   			session_cache_limiter('public'); 
 		} 
-		session_id();
+		
 		if (!isset($_SESSION)) {
 		  session_start();
 		}
@@ -188,5 +184,4 @@ if(isset($_POST['logar']) && $_POST['logar'] == 'Logar'){ // Inicio IF
 			header("Location: ". $MM_redirectLoginFailed );
 		  }
 	}
-}
 ?>
