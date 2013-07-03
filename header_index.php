@@ -9,6 +9,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+	$(function(){
+		
+		$('#header_img_noticias_2 ul').cycle({
+			fx:'fade',
+			speed:1000,
+			timeout:3000
+		})
+		
+	})
+</script>
+
+
 </head>
 
 <body>
@@ -45,7 +60,9 @@
                     </div>
 
                 	<div id="header_img_noticias_2">
-                    	<img src="images/fotos.jpg" alt="Home" title="Home" border="0"/>
+                    	<ul>
+                            <?php portal_headerImg();?> 
+                        </ul>
                     </div>
                     <div id="header_img_noticias_3">   
                     	<div id="header_img_noticias_3_esq">         
@@ -57,9 +74,8 @@
                               <ul>
 			                      <?php portal_headerNoticias();?>   
                               </ul>    
-                              <span><a href="#"> + ver mais notícias </a>  </span>
+                              <span><a href="index.php?pg=noticias.php"> + ver mais notícias </a>  </span>
                         </div>
-                        
                         <div id="header_img_noticias_3_dir">
                         	<img src="images/menu_capim_dir.jpg" alt="Home" title="Home" border="0" /> 
                         </div>

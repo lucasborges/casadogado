@@ -69,6 +69,7 @@
 	#header_img_noticias_1 img{margin-top:75px;}
 	
 	#header_img_noticias_2 {width:690px; height:280px;float:left;border:0px solid black;}
+	#header_img_noticias_2 li{list-style:none;}
 	#header_img_noticias_3 {width:385px; height:280px;float:left;border:0px solid red;}
 	#header_img_noticias_3_esq img{margin-top:75px;}
 
@@ -83,7 +84,7 @@
 										font-weight:bold; 
 										padding:10px;
 									}
-								
+									
 	#header_img_noticias_3_meio ul{	list-style:none;
 									float:left;
 									padding:10px; 
@@ -115,6 +116,8 @@
 	#header_img_noticias_3_meio ul li h2 a { text-decoration:none;
 											 color:#666666; 
 											 float:left;}
+											 
+	#header_img_noticias_3_meio ul li h2 a:hover{text-decoration:underline;color:#346700;}
 	
 	#header_img_noticias_3_meio span a {	text-decoration:none;
 									float:right;

@@ -71,6 +71,7 @@
 					$anunciosID 		= $resNoticias['anunciosID'];
 					$anuncios_titulo	= $resNoticias['anuncios_titulo'];
 					$anuncios_msg 		= $resNoticias['anuncios_msg'];
+					$anuncios_data		= $resNoticias['anuncios_dt'];
 					$i++;
 					if($i % 2 == 0){
 						$cor = 'style="background:#F4F4F4;"';										
@@ -80,14 +81,12 @@
 				}
 		?>
              <div class="noticias">
-   					<span>Anuncio ID:</span>
-                    <h1><?php echo $anunciosID ?></h1>
-                             
-                    <span>Titulo do anúncio:</span>
-                    <h1><?php echo $anuncios_titulo ?></h1>
-                                        
-                    <span>Mensagem: <strong </strong></span>
-                    <h1> <?php echo $anuncios_msg ?></h1>
+                    <h1><?php echo $anuncios_titulo ?></h1>                    
+                    <h2>Postado em: <?php echo date('d/m/Y',strtotime($anuncios_data)) ?></h2>
+                    <hr />                                        
+                    <br />
+                    <p><?php echo $anuncios_msg ?></p>
+                    <br />
              </div> <!-- FIM DIV NOTICIAS-->
             	 
             </div> <!-- Fim Div Conteudo Direito-->

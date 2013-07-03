@@ -3,6 +3,7 @@
 <script type="text/javascript" src="js/jquery_validate.js"></script>
 <script type="text/javascript" src="js/validate_func.js"></script>
 <script type="text/javascript" src="js/filtro.js"></script>
+<script type="text/javascript" src="js/cycle.js"></script>
 <script type="text/javascript" src="js/shadowbox_js/shadowbox.js"></script>
 <link rel="stylesheet" type="text/css" href="js/shadowbox_js/shadowbox.css">
 <script type="text/javascript">

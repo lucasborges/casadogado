@@ -1,4 +1,37 @@
 <?php
+function portal_headerImg(){	
+
+include"Connections/config.php";
+		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' ORDER BY RAND() LIMIT 5";
+		
+		try{
+			$query = $conecta->prepare($sql);
+			$query->execute();
+			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+		}catch(PDOexception $errorSql){
+			echo 'Erro ao selecionar noticias;';
+		}
+		
+		foreach($resultado as $res){
+			$produtoTipo 	= $res['produtoTipo'];
+			$produtoSexo 	= $res['produtoSexo'];
+			$produtoIdade	= $res['produtoIdade'];
+			$produtoCidade	= $res['produtoCidade'];
+			$produtoEstado	= $res['produtoEstado'];
+			$produtoSexo	= $res['produtoSexo'];
+			$produtoImagem	= $res['produtoImg'];
+			$produtoTitulo	= $res['produtoTitulo'];
+			$produtoId		= $res['produtoID'];
+			
+		echo '<li>';
+		echo '<a href="interno.php?pg=produto.php&produto='.$produtoId.'&categoria='.$produtoTipo.'"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=280&w=690&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/></a>';	    
+		echo '</li>';
+	}
+	
+}
+?>
+
+<?php
 function portal_headerNoticias(){	
 
 include"Connections/config.php";

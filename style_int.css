@@ -223,13 +223,24 @@
 									
 	#conteudo_dir  .lista_um li h4 a{text-decoration:none; color:#333;font:12px Arial, Helvetica, sans-serif;font-weight:bold;}
 	#conteudo_dir  .lista_um li h4 a:hover{color:#346700; font-weight:bold; text-decoration:underline;}
-
+	
 	#conteudo_dir .noticias{height: 800px;}
-	#conteudo_dir .noticias form{ background:#F7F7F7; padding:5px;}
-	#conteudo_dir .noticias label{display:block;margin:5px 0; float:left;}
-	#conteudo_dir .noticias span{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700; display:block;}
-	#conteudo_dir .noticias h1{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700; display:block;}
-	#conteudo_dir .noticias textarea{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
+	#conteudo_dir .noticias h1{font:20px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#336600;				
+					text-shadow:1px 1px #fff;
+					font-weight:bold;}
+					
+	#conteudo_dir .noticias h2{margin-top:5px;color:#999;font-weight:bold;}
+	
+	#conteudo_dir .noticias p {margin:5px 0;
+					font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#666;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;
+					text-align:justify;}
+	#conteudo_dir .noticias h3{font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#333; display:block; text-align:justify;}
+	
 	
 	#conteudo_dir_formulario{	width:690px;
 								height:100px; 
@@ -463,6 +474,22 @@
 	
 	
 	#pagina{width:969px; margin-left:115px;float:left; border:0px solid red;}
+	
+	#pagina .noticias h1{font:20px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#336600;				
+					text-shadow:1px 1px #fff;
+					font-weight:bold;}
+					
+	#pagina .noticias h2{margin-top:5px;color:#999;font-weight:bold;}
+	
+	#pagina .noticias p {margin:5px 0;
+					font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#666;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;
+					text-align:justify;}
+	#pagina .noticias h3{font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#333; display:block; text-align:justify;}
 	
 	#pagina .error{ font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; font-weight:bold; color:#F00; padding:4px;}
 		

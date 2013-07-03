@@ -3,6 +3,10 @@ define('HOST','mysql.casadogado.com.br');
 define('DB','casadogado_www');
 define('USER','casadogado');
 define('PASS','1q2w3e4r');
+//define('HOST','localhost');
+//define('DB','portaldogado');
+//define('USER','root');
+//define('PASS','');
 $conexao = 'mysql:host='.HOST.';dbname='.DB;
 try{
 		$conecta = new PDO($conexao,USER,PASS);
