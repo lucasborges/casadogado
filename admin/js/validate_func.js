@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	<!-- VALIDA CADASTRO DE CLIENTES NO SITE -->
+	<!-- VALIDA CADASTRO DE PRODUTOS NO SITE -->
 	$("#cadastraProduto").validate({
 						   
 				rules:{
@@ -28,5 +28,27 @@ $(document).ready(function(){
 				descricao:{required:"Campo Descrição obrigatório!"},
 				idade:{required:"Campo Idade obrigatório!"}
 		},						   
+   });		  
+   
+   <!-- VALIDA CADASTRO DE ANUNCIOS NO SITE -->
+	$("#cadastraNoticia").validate({
+				rules:{
+				titulo:{required:true},
+				msg:{required:true},
+				},
+				
+	   messages:{
+	            titulo:{required:"Campo Título do Anúncio obrigatório!"},
+				msg:{required:"Campo Mensgagem Obrigatório!"}
+		},						   
    });		   
+   
+   
+   
+   
+   
+   
+   
+   
+    
 })

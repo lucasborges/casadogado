@@ -55,18 +55,7 @@
                         <div id="header_img_noticias_3_meio">
                         	<span>Notícias</span>  
                               <ul>
-			                    <li>
-            			            <h1>15/03/2013 </h1>
-                           			<h2><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</a></h2>
-			                    </li>    
-                                <li>
-            			            <h1>15/03/2013 </h1>
-                           			<h2><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</a></h2>
-			                    </li>                 	
-                                <li>
-            			            <h1>15/03/2013 </h1>
-                           			<h2><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</a></h2>
-			                    </li>  
+			                      <?php portal_headerNoticias();?>   
                               </ul>    
                               <span><a href="#"> + ver mais notícias </a>  </span>
                         </div>

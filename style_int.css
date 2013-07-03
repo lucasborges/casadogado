@@ -223,7 +223,13 @@
 									
 	#conteudo_dir  .lista_um li h4 a{text-decoration:none; color:#333;font:12px Arial, Helvetica, sans-serif;font-weight:bold;}
 	#conteudo_dir  .lista_um li h4 a:hover{color:#346700; font-weight:bold; text-decoration:underline;}
-	
+
+	#conteudo_dir .noticias{height: 800px;}
+	#conteudo_dir .noticias form{ background:#F7F7F7; padding:5px;}
+	#conteudo_dir .noticias label{display:block;margin:5px 0; float:left;}
+	#conteudo_dir .noticias span{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700; display:block;}
+	#conteudo_dir .noticias h1{font:16px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700; display:block;}
+	#conteudo_dir .noticias textarea{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
 	
 	#conteudo_dir_formulario{	width:690px;
 								height:100px; 

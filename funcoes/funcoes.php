@@ -1,4 +1,30 @@
 <?php
+function portal_headerNoticias(){	
+
+include"Connections/config.php";
+		$sql = "SELECT * FROM portal_anuncios ORDER BY anunciosID desc limit 3";
+		
+		try{
+			$query = $conecta->prepare($sql);
+			$query->execute();
+			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+		}catch(PDOexception $errorSql){
+			echo 'Erro ao selecionar noticias;';
+		}
+		
+		foreach($resultado as $res){
+			$anuncioTitulo 	= $res['anuncios_titulo'];
+			$anuncioData	= $res['anuncios_dt'];
+			$anuncioID		= $res['anunciosID'];
+			
+		echo '<li>';
+		echo '<h1>'. date('d/m/Y',strtotime($anuncioData)) .'</h1>';
+		echo '<h2><a href="interno.php?pg=noticias_single.php&editarAnuncio='.$anuncioID.'">'. $anuncioTitulo .'</a></h2>';
+		echo '</li>';
+	}
+}
+?>
+<?php
 
 	function portal_homePosts(){	
 	

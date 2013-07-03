@@ -11,5 +11,4 @@
 			}else {
 			include("$exe.php");
 			}
-        
-        ?>
+?>

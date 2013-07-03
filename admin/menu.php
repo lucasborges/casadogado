@@ -29,6 +29,11 @@
                 <li><a href="painel.php?exe=admin-produtos/todos_clientes"> &raquo;&nbsp;Editar Cliente</a></li>
                 <li><a href="#"> &raquo;&nbsp;Alterar Dados </a></li>
             </ul>
+            <ul>
+            <li class="titulo">Notícias:</li>
+             <li><a href="painel.php?exe=adminNoticias/noticia"> &raquo;&nbsp;Criar Notícias</a></li>
+              <li><a href="painel.php?exe=adminNoticias/lista_noticias"> &raquo;&nbsp;Listar Noticias</a></li>
+            </ul>
             <ul>  
                 <li class="titulo">Mensagens:</li>
                 <li><a href="#">&raquo;&nbsp;Suporte ao Cliente</a></li>

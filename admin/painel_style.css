@@ -27,6 +27,7 @@ body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7;}
 #content_conteudo h1{ font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
 #content_conteudo h2{ font:16px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
 #content_conteudo h3{ font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;}
+#content_conteudo h4{background:#346700; color:#fff;font:14px 'Trebuchet MS', Arial, Helvetica, sans-serif;font-weight:bold;}
 #content_conteudo .ok{ padding:5px;background:#FFCC00;font-weight:bold;color:#346700;border:1px solid #FFF;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;}
 #content_conteudo .no{ padding:5px;background:#C00; color:#FFF;border:1px solid #FFF; font:14px "Trebuchet MS", Arial, Helvetica, sans-serif}
 #content_conteudo p {font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333; margin:10px 0;}	
@@ -44,7 +45,7 @@ body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7;}
 #content_conteudo input{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
 #content_conteudo textarea{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666;padding:5px;}
 #content_conteudo select{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#666;padding:5px;}
-#content_conteudo .btn{padding:0;margin:0; background:#F7F7F7}
+#content_conteudo .btn{padding:0;margin:0;background:#F7F7F7;}
 #content_conteudo a{font:18px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#346700;}
 #content_conteudo a:hover{color:#FFCC00;}
 #content_conteudo .inbox a{font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;color:blue;font-weight:bold;text-decoration:none;}
