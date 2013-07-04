@@ -13,5 +13,14 @@ Shadowbox.init({
     language: 'pt',
     players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv'],
 });
+
+$(function(){		
+		$('#header_img_noticias_2 ul').cycle({
+			fx:'fade',
+			speed:1000,
+			timeout:3000
+		})
+		
+	})
 </script>
 <!-- PHP -->

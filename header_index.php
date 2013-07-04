@@ -10,18 +10,6 @@
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript">
-
-	$(function(){		
-		$('#header_img_noticias_2 ul').cycle({
-			fx:'fade',
-			speed:1000,
-			timeout:3000
-		})
-		
-	})
-</script>
-
 
 </head>
 
@@ -183,4 +171,3 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 			header("Location: ". $MM_redirectLoginFailed );
 		  }
 	}
-?>
