@@ -12,8 +12,7 @@
 
 <script type="text/javascript">
 
-	$(function(){
-		
+	$(function(){		
 		$('#header_img_noticias_2 ul').cycle({
 			fx:'fade',
 			speed:1000,

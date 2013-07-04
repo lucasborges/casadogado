@@ -5,7 +5,9 @@
 <script type="text/javascript" src="js/filtro.js"></script>
 <script type="text/javascript" src="js/cycle.js"></script>
 <script type="text/javascript" src="js/shadowbox_js/shadowbox.js"></script>
+<script type="text/javascript" src="js/jwplayer/jwplayer.js"></script>
 <link rel="stylesheet" type="text/css" href="js/shadowbox_js/shadowbox.css">
+
 <script type="text/javascript">
 Shadowbox.init({
     language: 'pt',

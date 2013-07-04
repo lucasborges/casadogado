@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,7 +9,7 @@
 <title>.: Portal do Gado :.</title>
 <link href="style_int.css"  rel="stylesheet" type="text/css" />
 <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
-</video>
+
 </head>
 
 <body>
@@ -49,7 +50,7 @@
             	<label>
                 	<span> BUSCAR </span>
                     
-                    <input type="text" onblur="if (this.value == '') {this.value = 'Digite aqui o que procura...';}" 
+                    <input type="text" onBlur="if (this.value == '') {this.value = 'Digite aqui o que procura...';}" 
 									   onfocus="if (this.value == 'Digite aqui o que procura...') {this.value = '';}" 
 										maxlength="100" size="20" value="Digite aqui o que procura..." name="keywords" />
                     <input type="submit" name="Buscar" value="" class="btn"/>                    

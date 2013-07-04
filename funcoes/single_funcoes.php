@@ -71,16 +71,23 @@
 			}
 			
 			
-	//		echo '<li>';
-	//		echo '<img src="timthumb.php?src=midias/'.$produtoImagem.'&h=270&w=400&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/>';
-	//		echo '</li>';
-			
+//echo '<li>';
+//echo '<img src="timthumb.php?src=midias/'.$produtoImagem.'&h=270&w=400&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/>';
+//echo '</li>';
+					
 		echo '<li>';	
-		echo '<video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" width="400" height="270" poster="my_video_poster.png" data-setup="{}">';
-		echo '<source src=videos/'.$produtoVideo.' type="video/mp4">';
-		echo '</video>	';
+		echo '<div id="container">Loading the player ...</div>';
+		echo '<script type="text/javascript">';
+		echo 'jwplayer("container").setup(';
+		echo '{';
+		echo 'flashplayer: "js/jwplayer/player.swf",';
+		echo 'file: "videos/'.$produtoVideo.'",';
+		echo 'height: 270,';
+		echo 'width: 400,';
+		echo 'skin: "/skins/modieus/modieus.zip"';
+		echo '});';
+		echo '</script>';
 		echo '</li>';
-			
 			
 		echo '<li>';
 		echo '<h3><strong>Tipo:</strong> '.$produtoTipo.'</h3>';
