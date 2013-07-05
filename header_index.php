@@ -166,6 +166,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 				}
 				header("Location:".$MM_redirectLoginSuccess);
 		} else {
-			header("Location:".$MM_redirectLoginFailed);
+			//header("Location:".$MM_redirectLoginFailed);
 		  }
 	}
