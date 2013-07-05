@@ -130,42 +130,42 @@
    
       <label>
         <span>Titulo do anúncio:</span>
-        <input type="text" name="editTitulo" value="<?php echo $editTitulo ?>" size="128" />
+        <input type="text" name="editTitulo" value="<?php echo $editTitulo;?>" size="128" />
       </label>
       
       <label>
         <span>Tipo: <strong </strong></span>
-        <input type="text" name="editTipo" value="<?php echo $editTipo ?>" size="128" />
+        <input type="text" name="editTipo" value="<?php echo $editTipo;?>" size="128" />
       </label>
         
         <label>
         <span>Sexo: <strong></strong></span>
-          <input type="text" name="editSexo" value="<?php echo $editSexo ?>" size="128" />
+          <input type="text" name="editSexo" value="<?php echo $editSexo;?>" size="128" />
       </label>
       
        <label>
         <span>Idade: <strong></strong></span>
-          <input type="text" name="editIdade" value="<?php echo $editIdade ?>" size="128" />
+          <input type="text" name="editIdade" value="<?php echo $editIdade;?>" size="128" />
       </label>
       
       <label>
         <span>Quantidade: <strong></strong></span>
-          <input type="text" name="editQtd" value="<?php echo $editQtd ?>" size="128" />
+          <input type="text" name="editQtd" value="<?php echo $editQtd;?>" size="128" />
       </label>
       
        <label>
         <span>Cidade: <strong></strong></span>
-          <input type="text" name="editCidade" value="<?php echo $editCidade ?>" size="128" />
+          <input type="text" name="editCidade" value="<?php echo $editCidade;?>" size="128" />
       </label>
       
        <label>
         <span>Estado: <strong></strong></span>
-          <input type="text" name="editEstado" value="<?php echo $editEstado ?>" size="128" />
+          <input type="text" name="editEstado" value="<?php echo $editEstado;?>" size="128" />
       </label>
       
       </label>
       	  <span>Valor à vista: <strong></strong></span>
-          <input type="text" name="editValorVista" value="<?php echo $editValorVista ?>" size="128" />
+          <input type="text" name="editValorVista" value="<?php echo $editValorVista;?>" size="128" />
          
       <label>
         <span>Valor à prazo:</span>
@@ -179,9 +179,9 @@
       
       <label>
         <span>Descrição:</span>
-        <textarea name="editDesc" cols="125" rows="5"> <?php echo $editDesc ?></textarea>
+        <textarea name="editDesc" cols="125" rows="5"> <?php echo $editDesc;?></textarea>
       </label>
-	<input type="hidden" name="produtoId" value="<?php echo $produtoId ?>" />
+	<input type="hidden" name="produtoId" value="<?php echo $produtoId;?>" />
     <?php
 		$editar = $_GET['editarAnuncio']; 
 		if($editar == ''){
@@ -194,11 +194,9 @@
         <?php
 		}
 	?>
-
     </form>
    <h1>Imagens do anúncio!</h1> 
 	 <div class="galeria"> <!--inicio div galeria-->
-     
      <?php
 		if(isset($_POST['executar']) && $_POST['executar'] == 'Excluir'){ // Inicio IF
 			$midiaId = $_POST['midiaId'];
@@ -218,12 +216,8 @@
 			}
 		}
 	?>
-     
-     
-   		 <?php 
-		
+    <?php 
 		 $produtoId = $_GET['editarAnuncio']; 
-			 
 			 if($produtoId == ''){
 			   	$produtoId = $_GET['anuncio'];
 			 }
@@ -241,28 +235,20 @@
 			$midiaId = $resImagem['midiaId'];
 			$produtoMidia = $resImagem['produtoMidia'];
 			$produtoId		=$resImagem['produtoId'];
-			
-			
-		
 	?>
            <div class="galeria_cadastro"> <!-- Galeria Cadastro -->
-                        <span class="imagem"> <img src="../midias/<?php echo $produtoMidia?>" width="100" alt="Exibição" /></	
+                        <span class="imagem"> <img src="../midias/<?php echo $produtoMidia;?>" width="100" alt="Exibição" /></	
                         span>
                     <form name="excluirImagem" action="" enctype="multipart/form-data" method="post">
-                        <input type="hidden" name="midiaId" value="<?php echo $midiaId?>"/>
-                        <input type="hidden" name="produtoMidia" value="<?php echo $produtoMidia?>"/>
-                        <input type="hidden" name="produtoId" value="<?php echo $produtoId?>"/>
+                        <input type="hidden" name="midiaId" value="<?php echo $midiaId;?>"/>
+                        <input type="hidden" name="produtoMidia" value="<?php echo $produtoMidia;?>"/>
+                        <input type="hidden" name="produtoId" value="<?php echo $produtoId;?>"/>
                         <input type="submit" name="executar" id="executar" value="Excluir" />
                     </form>
                 </div>
       <?php 
-	  }
-	?>        
-                </div> <!-- fim div galeria -->
-    
-
-   </div><!--conteudo-->
-
+	  }?>
+</div> <!-- fim div galeria -->
+</div><!--conteudo-->
 </div><!--contet-->
-     
-<?php include_once("footer.php");?>
+<?php include_once("footer.php");
