@@ -24,4 +24,3 @@
 			$clienteTelefone 		= $res_UsuarioSistema['telefone'];
 			$clienteSenha 			= $res_UsuarioSistema['senha'];
 			$clienteUsuarioNivel 	= $res_UsuarioSistema['usuarioNivel'];
-?>

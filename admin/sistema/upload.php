@@ -11,4 +11,3 @@ function Redimensionar($tmp, $name, $largura, $pasta){
 	imagedestroy($nova);
 	return($name);
 }
-?>

@@ -15,8 +15,5 @@ if(empty($pg)) {
 else {
 include("nav/$pg");
 }
-
 ?>
-
-
 <?php include_once("footer.php")?>

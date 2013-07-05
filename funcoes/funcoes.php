@@ -28,8 +28,7 @@ include"Connections/config.php";
 		echo '</li>';
 	}
 	
-}
-?>
+}?>
 
 <?php
 function portal_headerNoticias(){	

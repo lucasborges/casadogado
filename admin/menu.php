@@ -50,6 +50,4 @@
                 
  <?php } else { 
  	include("deslogar.php");
- }     ?>          
-                
-          
+ }

@@ -19,12 +19,7 @@
         Cidade - Uberlândia / MG <br />
         CEP - 38408-220
      </p>
-     
-    
      </div><!--fecha anuncies-->
-    
-    
-    
     <form name="fale_conosco" id="fale_conosco" method="post" action="" enctype="multipart/form-data">
       <?php
 		if(isset($_POST['fale_conosco'])){			
@@ -127,7 +122,5 @@
                 <input type="submit" name="fale_conosco" id="fale_conosco" value="" class="btnEnviar"/>
             </fieldset>
     </form>
-    
-    
 </div> <!-- Fecha Pagina -->
 

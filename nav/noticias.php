@@ -24,9 +24,7 @@
 					} else {
 						$cor = 'style="background:#CECEBF"';
 					}
-				
 		?>
-             
                     <h1><?php echo $anuncios_titulo ?></h1>                    
                     <h2>Postado em: <?php echo date('d/m/Y',strtotime($anuncios_data)) ?></h2>
                     <hr />                                        
