@@ -86,7 +86,7 @@ if (isset($_POST['email'])) {
 
   <div id="login">  <!-- Inicio login -->
     	<img src="imagens/portaldogado_logo.png" alt=""/>
-    	<form name="login_painel"  action="<?php echo $loginFormAction; ?>" method="POST">
+    	<form name="login_painel"  action="<?php echo $loginFormAction;?>" method="POST">
         	<label><span> E-mail:</span> <input type="text" name="email"/> </label>
             <label><span> Senha:  </span> <input type="password" name="senha"/> </label>
             <p> <a href="recover.php">[Esqueci minha senha] </a></p>
