@@ -1,4 +1,5 @@
 <?php 
+session_start();
 foreach ($_REQUEST as $___opt => $___val) {
 			  $$___opt = $___val;
 			}
