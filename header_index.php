@@ -43,7 +43,7 @@
 
                 	<div id="header_img_noticias_2">
                     	<ul>
-                            <?php portal_headerImg();?> 
+                            <?php portal_headerImg();?>
                         </ul>
                     </div>
                     <div id="header_img_noticias_3">   
@@ -54,7 +54,7 @@
                         <div id="header_img_noticias_3_meio">
                         	<span>Notícias</span>  
                               <ul>
-			                      <?php portal_headerNoticias();?>   
+			                      <?php portal_headerNoticias();?>
                               </ul>    
                               <span><a href="index.php?pg=noticias.php"> + ver mais notícias </a>  </span>
                         </div>
@@ -88,8 +88,6 @@
         	</div>
           	<!--  FIM Header Navegar-->
         </div> <!-- Fim Div header -->
-
-
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
