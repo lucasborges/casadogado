@@ -38,7 +38,8 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 ?>
 <?php
-// *** Validate request to login to this site.
+//Validate request to login to this site.
+header("Location: ". $MM_restrictGoTo); 
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -52,8 +53,8 @@ if (isset($_POST['email'])) {
   $loginUsername=$_POST['email'];
   $password=md5($_POST['senha']);
   $MM_fldUserAuthorization = "usuarioNivel";
-  $MM_redirectLoginSuccess = "painel.php";
-  $MM_redirectLoginFailed = "erro.php";
+  $MM_redirectLoginSuccess = "admin/painel.php";
+  $MM_redirectLoginFailed = "admin/erro.php";
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_painel_config, $painel_config);
   	
@@ -79,7 +80,8 @@ if (isset($_POST['email'])) {
   else {
     header("Location: ". $MM_redirectLoginFailed );
   }
-}?>
+}
+?>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
