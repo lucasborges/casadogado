@@ -154,11 +154,11 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 		  $loginFoundUser = mysql_num_rows($LoginRS);
 		  if ($loginFoundUser){
 			  $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');			
-				if (PHP_VERSION >= 5.1) {
-					session_regenerate_id(true);
-				} else {
+				//if (PHP_VERSION >= 5.1) {
+					//session_regenerate_id(true);
+				//} else {
 					session_regenerate_id();
-				}
+				//}
 				//declare two session variables and assign them
 				$_SESSION['MM_Username'] = $loginUsername;
 				$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
