@@ -21,7 +21,7 @@
      </p>
      </div><!--fecha anuncies-->
     <form name="fale_conosco" id="fale_conosco" method="post" action="" enctype="multipart/form-data">
-      <?php
+<?php
 		if(isset($_POST['fale_conosco'])){			
 					$contatoNome 			= strip_tags(trim($_POST['nome']));
 					$contatoEmail 			= strip_tags(trim($_POST['email']));
@@ -81,9 +81,7 @@
 					echo '<div class="enviado_err">Erro ao enviar seu e-mail! <br/>favor tente mais tarde ou nos informe pelo contato@portaldogado.com.br!</div>';
 				}
 			}	
-		}
-		
-	?>
+}?>
            <fieldset> <legend> Fale Conosco </legend>
                 <label>
                     <span> Nome: </span>
@@ -123,4 +121,3 @@
             </fieldset>
     </form>
 </div> <!-- Fecha Pagina -->
-

@@ -3,7 +3,7 @@
 <?php include_once("header.php");?>
         <div id="local"> <!-- Inicio div local-->
     	   <div class="caminho"> Onde Estou: Portal do Gado &raquo;Painel de Controle; &raquo; Edição de Perfil</div>
- 	       <div class="welcome"> Olá <?php echo $clienteNome ?>| Hoje <?php echo date('d/m/Y H:i').h ?> | <a href="deslogar.php">Deslogar</a></div>
+ 	       <div class="welcome"> Olá <?php echo $clienteNome ?>| Hoje <?php echo date('d/m/Y H:i').h;?> | <a href="deslogar.php">Deslogar</a></div>
         </div> <!-- fim div local-->
         
         <div id="content"><!-- inicio div content-->
@@ -45,22 +45,22 @@
 					}catch(PDOexception $error_atualizaPerfil){
 						echo 'Error ao atualiar o perfil' .$error_atualizaPerfil;
 					}				  
-				}					
-		   ?>        
+				}
+?>        
             <form name="perfil" action="" enctype="multipart/form-data" method="post" >
                  <label>
                  	<span> Nome:</span>
-                 	<input type="text" name="sendNome" size="100" value= "<?php echo $clienteNome?>" />
+                 	<input type="text" name="sendNome" size="100" value= "<?php echo $clienteNome;?>" />
                  </label>
                     
                   <label>
                  	<span> Operadora Celular:</span>
-                 	<input type="text" name="sendOperadora" size="60" value="<?php echo $clienteOperadora?>" />
+                 	<input type="text" name="sendOperadora" size="60" value="<?php echo $clienteOperadora;?>" />
                  </label>
                  
                   <label>
                  	<span> Telefone Celuar:</span>
-                 	<input type="text" name="sendCelular" size="60" value= "<?php echo $clienteTelefone?>" />
+                 	<input type="text" name="sendCelular" size="60" value= "<?php echo $clienteTelefone;?>" />
                  </label>
                  
                  <label>
@@ -73,6 +73,6 @@
             </form>
             </div><!-- fim div content conteudo-->
         </div> <!-- fim div content -->
-		<?php include_once("footer.php")?> 
+		<?php include_once("footer.php");?> 
 </body>
 </html>

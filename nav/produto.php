@@ -1,6 +1,5 @@
    <div id="conteudo"> <!-- Inicio Div Conteudo -->
         	<div id="conteudo_esq"> <!-- Inicio Div Conteudo Esquerdo -->
-            
             	<div id="conteudo_esq_categ"> <!-- Inicio Div Conteudo Esquerdo Categoria-->
                 	<span> Categorias </span>
                 	<div id="conteudo_esq_categ_dentro"> <!-- Inicio Div Conteudo Esquerdo Categoria Dentro-->
@@ -54,7 +53,7 @@
              
             <div id="conteudo_dir"> <!-- Inicio Div Conteudo Direito-->
             	
-            	 <?php get_produtoTitulo() ; //Vem da pasta Funcoes/single funcoes?>
+            	 <?php get_produtoTitulo();//Vem da pasta Funcoes/single funcoes?>
                 
                  <ul class="lista">
                      <?php get_produtoInfo();?>   
@@ -78,7 +77,7 @@
                     <h2>Caso tenha interesse no lote e gostaria de receber maiores detalhes, preencha o formulário. <br/> Teremos o maior prazer em	
                      atendê-lo!</h2>
                      
-                <?php
+<?php
 		if(isset($_POST['cadastrar_interesse'])){
 					$clienteId				=  strip_tags(trim($_POST['idDoCliente']));
 					$contatoNome 			= strip_tags(trim($_POST['nome']));
@@ -126,9 +125,7 @@
 				}catch(PDOexception $erro_cadastraMail){
 					$res ='<div class="enviado_err">Erro ao enviar seu e-mail! <br/>favor tente mais tarde ou nos informe pelo contato@portaldogado.com.br!</div>' .$erro_cadastraMail;
 				}
-		}
-		
-	?>
+		}?>
              
                    
       <form name="cadastrar_interesse" id="cadastrar_interesse" action="" method="post" enctype="multipart/form-data">

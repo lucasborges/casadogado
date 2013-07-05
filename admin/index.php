@@ -1,4 +1,4 @@
-<?php require_once('../Connections/painel_config.php'); ?>
+<?php require_once('../Connections/painel_config.php');?>
 <?php
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -83,7 +83,6 @@ if (isset($_POST['email'])) {
 </head>
 
 <body>
-
   <div id="login">  <!-- Inicio login -->
     	<img src="imagens/portaldogado_logo.png" alt=""/>
     	<form name="login_painel"  action="<?php echo $loginFormAction;?>" method="POST">
@@ -93,7 +92,5 @@ if (isset($_POST['email'])) {
             <input type="submit" name="logar" value="Logar" class="btn" />
         </form>
     </div> <!-- Fecha login -->
-    
-    
 </body>
 </html>

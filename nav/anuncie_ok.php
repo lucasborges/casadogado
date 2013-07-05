@@ -1,7 +1,6 @@
 <div id="pagina">
 	<div class="anuncie_ok">
     <?php 
-		        
 		$criadoEm				=	date('Y-m-d H:i:s');
 		$modificadoEm			=	date('Y-m-d H:i:s');
 		$usuarioNivel			=	'cliente';
@@ -120,7 +119,7 @@
 					{
 						echo '<h3>Erro ao cadastrar, por favor tente novamente ou nos informe o erro no email contato@portaldogado.com.br</h3>';
 					}
-			}?>
+}?>
     </div>    
 </div> <!-- Fecha Pagina -->
 

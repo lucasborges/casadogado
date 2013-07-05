@@ -66,7 +66,4 @@
             <input type="submit" name="cadastrar_cliente" id="cadastrar_cliente" value="" class="btn" />
         </fieldset>
     </form>
-    
-    
 </div> <!-- Fecha Pagina -->
-

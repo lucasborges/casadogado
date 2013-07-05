@@ -1,6 +1,5 @@
-	<div id="content_menu"><!-- inicio div content menu-->
-
-	<?php
+<div id="content_menu"><!-- inicio div content menu-->
+<?php
 		if($clienteUsuarioNivel == 'cliente'){?>
            	<ul>
                	<li><a href="painel.php?exe=home/home"> &raquo;&nbsp;Inicio</a></li>
@@ -19,8 +18,8 @@
             </ul>
             -->
     </div><!-- fim div content menu--> 
- <?php
- }elseif ($clienteUsuarioNivel == 'admin'){?> 
+<?php
+ }elseif ($clienteUsuarioNivel == 'admin'){?>
            	<ul>
                	<li><a href="painel.php?exe=home/home"> &raquo;&nbsp;Inicio</a></li>
                	<li class="titulo">Anunciantes:</li>
@@ -48,6 +47,6 @@
             </ul>
 		</div><!-- fim div content menu-->  
                 
- <?php } else { 
+<?php } else { 
  	include("deslogar.php");
  }

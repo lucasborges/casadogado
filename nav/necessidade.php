@@ -47,7 +47,4 @@
             <input type="submit" name="enviar" value="" class="btnEnviar"/>
         </fieldset>
     </form>
-    
-    
 </div> <!-- Fecha Pagina -->
-

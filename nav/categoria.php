@@ -1,4 +1,4 @@
-   	<div id="conteudo"> <!-- Inicio Div Conteudo -->
+<div id="conteudo"> <!-- Inicio Div Conteudo -->
         	<div id="conteudo_esq"> <!-- Inicio Div Conteudo Esquerdo -->
             
             	<div id="conteudo_esq_categ"> <!-- Inicio Div Conteudo Esquerdo Categoria-->
@@ -84,13 +84,9 @@
                    <h7>Você poderá se interessar também por</h7>
                 <!-- Inicio Lista Dois -->
                 <ul class="lista_dois">
-	               <?php portal_homePostFooter(); ?>
+	               <?php portal_homePostFooter();?>
                 </ul>  
                 <!-- Fim Lista Dois -->    
                   <label> <a href="#"> VER MAIS OFERTAS >> </a></label>
             </div> <!-- Fim Div Conteudo Direito-->
-               
-         
-                           
-        </div><!-- FIM Div Conteudo -->
-        
+</div><!-- FIM Div Conteudo -->

@@ -18,9 +18,7 @@ exit;
 <title>.: Portal do Gado :.</title>
 <link href="login_style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-
   <div id="login">  <!-- Inicio login -->
     	<img src="imagens/portaldogado_logo.png" alt=""/>
     	<span class="restrito"> <strong>Deslogou com sucesso!</strong> <br />
@@ -29,10 +27,6 @@ exit;
          <a href="index.php"> Logar </a>
     	  <a href="../"> Voltar ao site </a>
          </div>
-       
    </div> <!-- Fecha login -->
-      
-   
-    
 </body>
 </html>

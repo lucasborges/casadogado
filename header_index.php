@@ -5,13 +5,11 @@
 <?php include"js/scripts.php";?>
 <?php include"funcoes/funcoes.php";?>
 <?php require_once('Connections/painel_config.php');?>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
 	<div id="box"> <!-- Inicio Div BOX -->
     	<div id="header"> <!-- Inicio Div header -->
 	       <div id="header_topo"> <!-- Inicio Div Header_topo-->            
@@ -124,7 +122,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 }
 ?>
-
 <?php
 		if (!isset($_SESSION)) {
 		  session_start();

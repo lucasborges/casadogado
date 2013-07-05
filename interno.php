@@ -1,5 +1,4 @@
 <?php include_once("header_interno.php")?>
-
 <?php 
 foreach ($_REQUEST as $___opt => $___val) {
   $$___opt = $___val;
@@ -16,4 +15,4 @@ else {
 include("nav/$pg");
 }
 ?>
-<?php include_once("footer.php")?>
+<?php include_once("footer.php");

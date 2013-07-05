@@ -98,8 +98,5 @@ if (isset($_POST['email'])) {
         	<strong style="color:#F00;">[&loz;] &nbsp;</strong>Erro ao logar: senha ou email inválidos!
     	</div>
     </div> <!-- Fecha login -->
-      
-   
-    
 </body>
 </html>

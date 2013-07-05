@@ -1,6 +1,5 @@
    	<div id="conteudo"> <!-- Inicio Div Conteudo -->
         	<div id="conteudo_esq"> <!-- Inicio Div Conteudo Esquerdo -->
-            
             	<div id="conteudo_esq_categ"> <!-- Inicio Div Conteudo Esquerdo Categoria-->
                 	<span> Categorias </span>
                 	<div id="conteudo_esq_categ_dentro"> <!-- Inicio Div Conteudo Esquerdo Categoria Dentro-->

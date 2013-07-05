@@ -1,6 +1,5 @@
    <div id="conteudo"> <!-- Inicio Div Conteudo -->
         	<div id="conteudo_esq"> <!-- Inicio Div Conteudo Esquerdo -->
-            
             	<div id="conteudo_esq_categ"> <!-- Inicio Div Conteudo Esquerdo Categoria-->
                 	<span> Categorias </span>
                 	<div id="conteudo_esq_categ_dentro"> <!-- Inicio Div Conteudo Esquerdo Categoria Dentro-->
@@ -81,14 +80,12 @@
 				}
 		?>
              <div class="noticias">
-                    <h1><?php echo $anuncios_titulo ?></h1>                    
+                    <h1><?php echo $anuncios_titulo;?></h1>                    
                     <h2>Postado em: <?php echo date('d/m/Y',strtotime($anuncios_data)) ?></h2>
                     <hr />                                        
                     <br />
-                    <p><?php echo $anuncios_msg ?></p>
+                    <p><?php echo $anuncios_msg;?></p>
                     <br />
              </div> <!-- FIM DIV NOTICIAS-->
-            	 
             </div> <!-- Fim Div Conteudo Direito-->
-          
         </div><!-- FIM Div Conteudo -->

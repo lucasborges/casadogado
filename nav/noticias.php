@@ -1,6 +1,6 @@
 <div id="pagina">
     	<div class="noticias">
-           <?php
+<?php
 				$anunciosID = $_GET['editarAnuncio']; 
 				$sql_buscaNoticias = 'SELECT * FROM portal_anuncios ORDER BY anunciosID DESC';
 			   				   
@@ -23,17 +23,14 @@
 						$cor = 'style="background:#F4F4F4;"';										
 					} else {
 						$cor = 'style="background:#CECEBF"';
-					}
-		?>
-                    <h1><?php echo $anuncios_titulo ?></h1>                    
+					}?>
+                    <h1><?php echo $anuncios_titulo;?></h1>                    
                     <h2>Postado em: <?php echo date('d/m/Y',strtotime($anuncios_data)) ?></h2>
                     <hr />                                        
                     <br />
-                    <p> <?php echo $anuncios_msg ?></p>
+                    <p> <?php echo $anuncios_msg;?></p>
                     <br />
-          <?php
-		  	}
-		  ?>
+<?php }?>
              </div> <!-- FIM DIV NOTICIAS-->
 </div> <!-- Fecha Pagina -->
 

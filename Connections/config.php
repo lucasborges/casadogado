@@ -12,5 +12,4 @@ try{
 		$conecta = new PDO($conexao,USER,PASS);
 		$conecta->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 		}catch(PDOexception $error_conecta){
-		echo('Erro ao conectar favor informe no email contato@casadogado.com.br');
-	}
+		echo('Erro ao conectar favor informe no email contato@casadogado.com.br');}
