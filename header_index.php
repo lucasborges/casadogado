@@ -157,7 +157,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 					session_regenerate_id();
 				}
 				//declare two session variables and assign them
-				unset($_SESSION());
+				unset($_SESSION[]);
 				$_SESSION['MM_Username'] = $loginUsername;
 				$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
 			
