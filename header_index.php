@@ -9,10 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
-
-
 </head>
-
 <body>
 
 	<div id="box"> <!-- Inicio Div BOX -->
@@ -154,12 +151,13 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 		  $loginFoundUser = mysql_num_rows($LoginRS);
 		  if ($loginFoundUser){
 			  $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');			
-				//if (PHP_VERSION >= 5.1) {
-					//session_regenerate_id(true);
-				//} else {
+				if (PHP_VERSION >= 5.1) {
+					session_regenerate_id(true);
+				} else {
 					session_regenerate_id();
-				//}
+				}
 				//declare two session variables and assign them
+				unset($_SESSION());
 				$_SESSION['MM_Username'] = $loginUsername;
 				$_SESSION['MM_UserGroup'] = $loginStrGroup;	      
 			
