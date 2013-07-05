@@ -20,5 +20,4 @@
             <div id="header_banner"> <!-- inicio div header banner-->
             	Banner
             </div> <!-- fim div header  banner-->
-        	
         </div> <!-- fim div header-->
