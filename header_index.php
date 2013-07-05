@@ -166,8 +166,8 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 				if (isset($_SESSION['PrevUrl']) && false) {
 				  $MM_redirectLoginSuccess = $_SESSION['PrevUrl'];	
 				}
-				header("Location: " . $MM_redirectLoginSuccess );
+				header("Location:".$MM_redirectLoginSuccess);
 		} else {
-			header("Location: ". $MM_redirectLoginFailed );
+			header("Location:".$MM_redirectLoginFailed);
 		  }
 	}
