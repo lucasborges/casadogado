@@ -22,7 +22,7 @@
                         
                         <?php 
 							$emailStatus = 'pendente';
-							$sql_inboxAdmin = 'select * from portal_mailAdmin where emailStatus = :emailStatus order by emailData asc';
+							$sql_inboxAdmin = 'select * from portal_mailadmin where emailStatus = :emailStatus order by emailData asc';
 							
 							try{
 								$query_inboxAdmin = $conecta->prepare($sql_inboxAdmin);

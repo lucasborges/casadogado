@@ -42,7 +42,7 @@
 		$inicio = ($pag * $maximo) - $maximo;
 						
 		$emailStatus = 'completo';
-		$sql_inboxAdmin = 'select * from portal_mailAdmin where emailStatus = :emailStatus order by emailData asc limit '.$inicio. ','.$maximo;
+		$sql_inboxAdmin = 'select * from portal_mailadmin where emailStatus = :emailStatus order by emailData asc limit '.$inicio. ','.$maximo;
 							
 							try{
 								$query_inboxAdmin = $conecta->prepare($sql_inboxAdmin);
@@ -91,7 +91,7 @@ include("../Connections/painel_config.php");
 //USE A MESMA SQL QUE QUE USOU PARA RECUPERAR OS RESULTADOS
 //SE TIVER A PROPRIEDADE WHERE USE A MESMA TAMBÉM
 
-$sql_res = mysql_query("select * from portal_mailAdmin where emailStatus = 'completo' order by emailData asc");
+$sql_res = mysql_query("select * from portal_mailadmin where emailStatus = 'completo' order by emailData asc");
 $total = mysql_num_rows($sql_res);
 $paginas = ceil($total/$maximo);
 $links = '5'; //QUANTIDADE DE LINKS NO PAGINATOR

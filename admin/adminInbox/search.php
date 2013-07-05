@@ -33,7 +33,7 @@
     <?php 					
 						
 		$emailStatus = $_POST['s'];
-		$sql_inboxAdmin = 'select * from portal_mailAdmin where emailNome like :emailStatus order by emailData asc';
+		$sql_inboxAdmin = 'select * from portal_mailadmin where emailNome like :emailStatus order by emailData asc';
 							
 							try{
 								$query_inboxAdmin = $conecta->prepare($sql_inboxAdmin);

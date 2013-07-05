@@ -23,7 +23,7 @@
                         
                         <?php 
 							$emailId = $_GET['emailId']; // GET PEGA NA URL
-							$sql_inboxAdmin = 'select * from portal_mailAdmin where emailId = :emailId';
+							$sql_inboxAdmin = 'select * from portal_mailadmin where emailId = :emailId';
 							
 							try{
 								$query_inboxAdmin = $conecta->prepare($sql_inboxAdmin);

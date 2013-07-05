@@ -28,7 +28,7 @@
 		$headers = "From: $emailAdmin \n";
 		$header .= "content-type: text/html; charset=\"utf-8\"\n\n";
 		
-		$sql_enviaAdmin = 'update portal_mailAdmin set	emailStatus 	= :emailStatus,
+		$sql_enviaAdmin = 'update portal_mailadmin set	emailStatus 	= :emailStatus,
 														emailResposta 	= :emailResposta,
 														emailTxt 		= :emailTxt
 														where emailId 	= :emailId';
@@ -68,7 +68,7 @@
                         
                         <?php 
 							$emailId = $_GET['emailId']; // GET PEGA NA URL
-							$sql_inboxAdmin = 'select * from portal_mailAdmin where emailId = :emailId';
+							$sql_inboxAdmin = 'select * from portal_mailadmin where emailId = :emailId';
 							
 							try{
 								$query_inboxAdmin = $conecta->prepare($sql_inboxAdmin);
