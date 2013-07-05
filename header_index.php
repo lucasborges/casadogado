@@ -38,8 +38,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 }
 ?>
 <?php
-//Validate request to login to this site.
-header("Location: ". $MM_restrictGoTo); 
 if (!isset($_SESSION)) {
   session_start();
 }
@@ -82,7 +80,6 @@ if (isset($_POST['email'])) {
   }
 }
 ?>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
