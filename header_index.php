@@ -1,9 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<?php include"Connections/config.php";?>
-<?php include"js/scripts.php";?>
-<?php include"funcoes/funcoes.php";?>
 <?php require_once('Connections/painel_config.php');?>
 <?php
 if (!function_exists("GetSQLValueString")) {
@@ -80,6 +77,9 @@ if (isset($_POST['email'])) {
   }
 }
 ?>
+<?php include"Connections/config.php";?>
+<?php include"js/scripts.php";?>
+<?php include"funcoes/funcoes.php";?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>.: Portal do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
@@ -136,10 +136,7 @@ if (isset($_POST['email'])) {
                         <div id="header_img_noticias_3_dir">
                         	<img src="images/menu_capim_dir.jpg" alt="Home" title="Home" border="0" /> 
                         </div>
-                    	
-                                        
                     </div>
-                   
             	</div> <!-- Fim Header Imagens Noticias -->   
             </div><!-- Fim Div Header_topo-->
 			
