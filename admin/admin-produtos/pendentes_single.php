@@ -74,9 +74,7 @@
 			 if($produtoId == ''){
 			   	$produtoId = $_GET['anuncio'];
 			 }
-			   
-			   
-			   
+			 
 			   $sql_buscaAtivos = 'SELECT * FROM portal_produto 
 			   						WHERE produtoID = :produtoId 
 			   						ORDER BY produtoCadastro asc';
@@ -112,8 +110,7 @@
 						$cor = 'style="background:#CECEBF"';
 					}
 				}
-	
-	?>
+?>
        	<h3 class="titulo">Id do Anuncio: <strong><?php echo $produtoId;?></strong> | id do cliente: <?php echo $clienteId;?> | Cadastro em: 
 		<?php echo date('d/m/Y H:m',strtotime($editeCadastro)); ?>h</h3>
        
@@ -221,7 +218,7 @@
 			 if($produtoId == ''){
 			   	$produtoId = $_GET['anuncio'];
 			 }
-		$sql_buscaImagem = 'SELECT * FROM PORTAL_MIDIAS WHERE produtoId = :produtoId';
+		$sql_buscaImagem = 'SELECT * FROM portal_midias WHERE produtoId = :produtoId';
 		try{
 			$query_buscaImagem = $conecta->prepare($sql_buscaImagem);
 			$query_buscaImagem-> bindValue(':produtoId',$produtoId,PDO::PARAM_STR);
