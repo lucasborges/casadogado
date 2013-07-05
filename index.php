@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php 
 	foreach ($_REQUEST as $___opt => $___val) {
   		$$___opt = $___val;
@@ -20,4 +21,4 @@
 		include("nav/$pg");	
 	}
 ?>
-<?php include_once("footer.php");
+<?php include_once("footer.php");?>
