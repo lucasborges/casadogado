@@ -92,6 +92,7 @@ include("../Connections/painel_config.php");
 //SE TIVER A PROPRIEDADE WHERE USE A MESMA TAMBÉM
 
 $sql_res = mysql_query("select * from portal_mailadmin where emailStatus = 'completo' order by emailData asc");
+$sql_res->execute();
 $total = mysql_num_rows($sql_res);
 $paginas = ceil($total/$maximo);
 $links = '5'; //QUANTIDADE DE LINKS NO PAGINATOR
