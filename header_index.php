@@ -151,8 +151,7 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 		  $loginFoundUser = mysql_num_rows($LoginRS);
 		  if ($loginFoundUser){
 			  $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
-			  unset($_SESSION);			
-				if (PHP_VERSION >= 5.1) {
+			  	if (PHP_VERSION >= 5.1) {
 					session_regenerate_id(true);
 				} else {
 					session_regenerate_id();
@@ -167,6 +166,6 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 				}
 				header("Location:".$MM_redirectLoginSuccess);
 		} else {
-			//header("Location:".$MM_redirectLoginFailed);
+			header("Location:".$MM_redirectLoginFailed);
 		  }
 	}
