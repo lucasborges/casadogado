@@ -16,6 +16,4 @@
             </div><!-- fim div content conteudo-->
             
         </div> <!-- fim div content -->
-		<?php include_once("footer.php")?> 
-        
-        
+		<?php include_once("footer.php");

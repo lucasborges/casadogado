@@ -8,15 +8,10 @@
         
         <div id="content"><!-- inicio div content-->
             
-			<?php include_once("menu.php")?>      
-            
+			<?php include_once("menu.php")?>
         	<div id="content_conteudo"><!-- inicio div content conteudo-->       
 			<?php include_once("sistema/carregando.php")?>
-            <h1> Aqui você pode atualizar suas informações. </h1>
-            
-            
-            
-            
+            <h1> Aqui você pode atualizar suas informações. </h1>            
            <?php 
 		   		if(isset($_POST['enviar'])){
 					$sendNome 		= strip_tags(trim($_POST['sendNome']));
@@ -50,11 +45,8 @@
 					}catch(PDOexception $error_atualizaPerfil){
 						echo 'Error ao atualiar o perfil' .$error_atualizaPerfil;
 					}				  
-				}
-														
-		   ?>
-
-            
+				}					
+		   ?>        
             <form name="perfil" action="" enctype="multipart/form-data" method="post" >
                  <label>
                  	<span> Nome:</span>
@@ -79,11 +71,7 @@
             		<input type="submit" id="enviar" name="enviar" value="Atualizar" style="width:180px;float:left;cursor:pointer;" />
             
             </form>
-            
-            
-            
             </div><!-- fim div content conteudo-->
-            
         </div> <!-- fim div content -->
 		<?php include_once("footer.php")?> 
 </body>
