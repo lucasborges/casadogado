@@ -51,8 +51,8 @@ if (isset($_POST['email'])) {
   $loginUsername=$_POST['email'];
   $password=md5($_POST['senha']);
   $MM_fldUserAuthorization = "usuarioNivel";
-  $MM_redirectLoginSuccess = "admin/painel.php";
-  $MM_redirectLoginFailed = "admin/erro.php";
+  $MM_redirectLoginSuccess = "/admin/painel.php";
+  $MM_redirectLoginFailed = "/admin/erro.php";
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_painel_config, $painel_config);
   	
