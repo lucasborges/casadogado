@@ -65,7 +65,7 @@ if (isset($_POST['email'])) {
   if ($loginFoundUser) {
     
     $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
-    
+	
 	if (PHP_VERSION >= 5.1){
 		session_regenerate_id(true);
 	} else{
