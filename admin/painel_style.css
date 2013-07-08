@@ -5,9 +5,9 @@ body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7;}
 
 /*Header*/
 
-#header{height:144px;border-bottom:5px solid #FFCC00;  margin-bottom:7px;}
-#header_logo{float:left;margin:0px 0 0 0;}
-#header_banner{width:728px;height:90px;padding:3px;border:1px solid #666;float:right;margin:0px 0 0 0; background-color:#FFF;}
+#header{height:144px;border-bottom:5px solid #FFCC00;  margin-bottom:6px;}
+#header_logo{float:left;margin:10px 0 0 0;}
+#header_banner{width:728px;height:90px;padding:3px;border:1px solid #666;float:right;margin:10px 0 0 0; background-color:#FFF;}
 
 #local{width:1024px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#346700;font-variant:normal;float:left; padding:5px;}
 #local .caminho{float:left;}
