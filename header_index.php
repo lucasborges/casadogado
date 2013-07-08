@@ -1,8 +1,9 @@
+<?php session_start();?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>.: Portal do Gado :.</title>
+<title>.: Casa do Gado :.</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <?php require_once('Connections/painel_config.php');?>
 <?php
@@ -65,7 +66,11 @@ if (isset($_POST['email'])) {
     
     $loginStrGroup  = mysql_result($LoginRS,0,'usuarioNivel');
     
-	if (PHP_VERSION >= 5.1) {session_regenerate_id(true);} else {session_regenerate_id();}
+	if (PHP_VERSION >= 5.1){
+		session_regenerate_id(true);
+	} else{
+		session_regenerate_id();
+	}
     //declare two session variables and assign them
     $_SESSION['MM_Username'] = $loginUsername;
     $_SESSION['MM_UserGroup'] = $loginStrGroup;	      
@@ -159,4 +164,4 @@ if (isset($_POST['email'])) {
 	            </form>
         	</div>
           	<!--  FIM Header Navegar-->
-        </div> <!-- Fim Div header -->
+</div> <!-- Fim Div header -->

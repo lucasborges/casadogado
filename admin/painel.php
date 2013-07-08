@@ -1,5 +1,7 @@
 <?php 
-session_start();
+if(isset($_SESSION)) {
+	session_start();
+}
 foreach ($_REQUEST as $___opt => $___val) {
 			  $$___opt = $___val;
 			}
