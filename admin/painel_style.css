@@ -1,11 +1,11 @@
 /*Reset*/
 *{margin:0;padding:0;}
-body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7;}
+body{background:url(imagens/painel_menu_bg.jpg) repeat-x #F7F7F7; }
 #box{width:1024px;margin:0 auto;}
 
 /*Header*/
 
-#header{height:144px;border-bottom:5px solid #FFCC00; margin-bottom:18px;}
+#header{height:145px;border-bottom:5px solid #FFCC00; margin-bottom:8px}
 #header_logo{float:left;margin:10px 0 0 0;}
 #header_banner{width:728px;height:90px;padding:3px;border:1px solid #666;float:right;margin:10px 0 0 0; background-color:#FFF;}
 
