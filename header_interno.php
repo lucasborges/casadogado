@@ -6,7 +6,7 @@
 <?php include"js/scripts.php";?>
 <?php include"funcoes/single_funcoes.php";?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>.: Portal do Gado :.</title>
+<title>.: Casado Gado :.</title>
 <link href="style_int.css"  rel="stylesheet" type="text/css" />
 <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
 
@@ -68,4 +68,4 @@
                     </div>       <!-- FIM Header Imagens Noticias -->
             	</div> <!-- Fim Header Imagens Noticias -->   
             </div><!-- Fim Div Header_topo-->	
-        </div> <!-- Fim Div header -->   
+</div> <!-- Fim Div header -->   
