@@ -98,9 +98,10 @@
 							text-shadow: white 0px 2px; 
 							color:#346700;}
 							
-	#header_img_noticias input{
+	#header_img_noticias input{float:left;
+							margin-top:10px;
 							padding:5px 5px; 
-							width:170px; 
+							width:270px; 
 							font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; 
 							color:#666;; 
 							border:1px solid #669900;}
