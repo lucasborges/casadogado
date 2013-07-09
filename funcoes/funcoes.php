@@ -1,10 +1,10 @@
 <?php
 function portal_headerImg(){	
 
-include"Connections/config.php";
-		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' ORDER BY RAND() LIMIT 5";
+//include"Connections/config.php";
+//		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' ORDER BY RAND() LIMIT 5";
 		
-		try{
+/*		try{
 			$query = $conecta->prepare($sql);
 			$query->execute();
 			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
@@ -22,12 +22,11 @@ include"Connections/config.php";
 			$produtoImagem	= $res['produtoImg'];
 			$produtoTitulo	= $res['produtoTitulo'];
 			$produtoId		= $res['produtoID'];
-			
+		}	*/
 		echo '<li>';
-		echo '<a href="interno.php?pg=produto.php&produto='.$produtoId.'&categoria='.$produtoTipo.'"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=280&w=690&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/></a>';	    
-		echo '</li>';
-	}
-	
+		//echo '<a href="interno.php?pg=produto.php&produto='.$produtoId.'&categoria='.$produtoTipo.'"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=280&w=690&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/></a>';	
+		echo '<img src="timthumb.php?src=images/gado-de-corte.jpg&h=280&w=690&zc=1" border="0"/></a>';	
+		echo '</li>';  
 }?>
 
 <?php
