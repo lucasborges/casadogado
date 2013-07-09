@@ -47,6 +47,7 @@
                 </div> <!-- FIM Div Conteudo Esquerdo News-->
                 
                 <div id="conteudo_esq_fb"> <!-- Inicio Div Conteudo Esquerdo Facebook -->
+                 <div class="fb-like-box" data-href="https://www.facebook.com/casadogado.com.br" data-width="230" data-height="390" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
                 </div> <!-- Fim Div Conteudo Esquerdo Facebook -->                
             </div><!-- FIM Div Conteudo Esquerdo -->
             

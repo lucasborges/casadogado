@@ -1,6 +1,6 @@
     <div id="footer">  <!-- Inicio div Footer -->   
     	<img src="images/telefone.png"/>
-        <h1>  Atendimento Gado Online: (34) 9996-3430 / (34) 9993-1900 / contato@portaldogado.com.br</h1>
+        <h1>  Atendimento Gado Online: (34) 9996-3430 / (34) 9993-1900 / contato@casadogado.com.br</h1>
         <div id="footer_bottom">      <!-- Inicio div Footer Bottom -->   
              <div id="footer_bottom_institucional">            	
                  <ul>
@@ -37,7 +37,7 @@
                 <a href="#" class="youtube"></a>
                 <label> Rua - Péricles Vieira da Motta,78  - Santa Mônica - 38408-220 - Uberlândia/MG <br />
                 		Contato - CTBC (34)9996-3430, VIVO (19)9734-0605, TIM (34)9217-1030<br />
-                        Email:contato@portaldogado.com.br</label> 
+                        Email:contato@casadogado.com.br</label> 
             </div>
             
             <div id="footer_bottom_logo">

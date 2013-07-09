@@ -11,8 +11,76 @@
     <br/>
      </div><!--fecha anuncies-->
     
-    
     <form name="cadastrar_necessidade" id="cadastrar_necessidade" method="post" action="" enctype="multipart/form-data">
+    
+    <?php
+		if(isset($_POST['enviar'])){			
+					$contatoNome 			= strip_tags(trim($_POST['nome']));
+					$contatoEmail 			= strip_tags(trim($_POST['email']));
+					$contatoOperadora		= strip_tags(trim($_POST['operadora']));
+					$contatoTelefone 		= strip_tags(trim($_POST['telefone']));
+					$contatoAssunto			= strip_tags(trim($_POST['assunto']));
+					$contatoMensagem	 	= strip_tags(trim($_POST['mensagem']));
+					$contatoData			= date('Y-m-d H:i:s');
+					$contatoStatus			= 'pendente';
+					$contatoCod				= date('d-H-i'). ' - Dia-Hora-Minuto - ' .$contatoEmail;		
+				
+				$sql_verificaContato = 'SELECT emailCod from portal_mailAdmin where emailCod = :contatoCod';
+									
+				try{
+					$query_verificaContato = $conecta->prepare($sql_verificaContato);
+					$query_verificaContato-> bindValue(':contatoCod',$contatoCod,PDO::PARAM_STR);
+					$query_verificaContato->execute();
+					$cont_verificaContato = $query_verificaContato->rowCount(PDO::FETCH_ASSOC);
+					}catch(PDOexception $error_verificaCod){
+						echo 'Erro ao selecionar o código do email';
+				}
+				
+				if($cont_verificaContato >= '1'){
+					echo '<div class="enviado_err">Por favor aguarde alguns minutos para enviar uma nova mensagem! <br/>Obrigado!</div>';
+				} else {
+					
+					$sql_contatoSite = 'Insert into portal_mailAdmin (	emailNome,
+																		emailEmail,
+																		emailOperadora,
+																		emailTelefone,
+																		emailAssunto,
+																		emailMensagem,
+																		emailData,
+																		emailStatus,
+																		emailCod )
+															values (	:contatoNome,
+																		:contatoEmail,
+																		:contatoOperadora,
+																		:contatoTelefone,
+																		:contatoAssunto,
+																		:contatoMensagem,
+																		:contatoData,
+																		:contatoStatus,
+																		:contatoCod	
+															)';
+															
+				try {
+					$query_cadastraContato = $conecta->prepare($sql_contatoSite);
+					$query_cadastraContato-> bindValue(':contatoNome',$contatoNome,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoEmail',$contatoEmail,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoOperadora',$contatoOperadora,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoTelefone',$contatoTelefone,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoAssunto',$contatoAssunto,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoMensagem',$contatoMensagem,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoData',$contatoData,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoStatus',$contatoStatus,PDO::PARAM_STR);
+					$query_cadastraContato-> bindValue(':contatoCod',$contatoCod,PDO::PARAM_STR);
+					$query_cadastraContato->execute();
+					echo '<div class="enviado">Seu e-mail foi enviado com sucesso!<br />Responderemos em breve!</div>';
+				}catch(PDOexception $erro_cadastraMail){
+					echo '<div class="enviado_err">Erro ao enviar seu e-mail! <br/>favor tente mais tarde ou nos informe pelo contato@casadogado.com.br!</div>';
+				}
+			}	
+}?>
+    
+    
+    
     	<fieldset> <legend> INFORME O QUE VOCÊ PRECISA!</legend>
             <label>
                 <span> Nome: </span>
@@ -43,8 +111,7 @@
                 <span> Mensagem: </span>
            		<textarea name="mensagem" id="mensagem" style="width:500px; height:90px;" ></textarea>
            </label>
-            
-            <input type="submit" name="enviar" value="" class="btnEnviar"/>
+            <input type="submit" name="enviar" id="enviar" value="" class="btnEnviar"/>
         </fieldset>
     </form>
 </div> <!-- Fecha Pagina -->
