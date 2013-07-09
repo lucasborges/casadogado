@@ -3,7 +3,7 @@
      <div class="anuncie">
      <h2>Cadastre-se e anuncie:</h2>
 
-    <p>O Sistema de anúncios do Portal do Gado é totalmente automatizado. Você se cadastra e terá acesso a um painel de controle como área de membros onde você poderá!</p>
+    <p>O Sistema de anúncios do Casa do Gado é totalmente automatizado. Você se cadastra e terá acesso a um painel de controle como área de membros onde você poderá!</p>
 
      <p>
      &raquo; Cadastrar Animais!<br />

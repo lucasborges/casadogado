@@ -10,7 +10,7 @@
      </p>
      
     <h2>Email:</h2>
-   	<p>contato@portaldogado.com.br</p>
+   	<p>contato@casadogado.com.br</p>
     
      <h2>Endereço:</h2>
 	

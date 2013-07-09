@@ -117,7 +117,7 @@ if (isset($_POST['email'])) {
                    <ul>
                 	   <li><a href="index.php?pg=home.php">Home</a></li>
                        <li><a href="index.php?pg=quemsomos.php">Quem Somos</a></li>
-                       <li><a href="index.php?pg=condicoes.php">Condições</a></li>
+                       <li><a href="index.php?pg=condicoes.php">Como Comprar</a></li>
                        <li><a href="index.php?pg=parceiros.php">Parceiros</a></li>  
                        <li><a href="index.php?pg=noticias.php">Notícias</a></li>                           	
                        <li><a href="index.php?pg=contato.php">Contato</a></li>

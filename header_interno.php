@@ -41,7 +41,7 @@
                    <ul>
                 	  <li><a href="index.php?pg=home.php">Home</a></li>
                        <li><a href="interno.php?pg=quemsomos.php">Quem Somos</a></li>
-                       <li><a href="interno.php?pg=condicoes.php">Condições</a></li>
+                       <li><a href="interno.php?pg=condicoes.php">Como Comprar</a></li>
                        <li><a href="interno.php?pg=parceiros.php">Parceiros</a></li>  
                        <li><a href="interno.php?pg=noticias.php">Notícias</a></li>                           	
                        <li><a href="interno.php?pg=contato.php">Contato</a></li>

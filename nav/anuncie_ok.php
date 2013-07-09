@@ -77,7 +77,7 @@
 		
 					/* Enviando email para mim*/			
 					$mail_data = date('d/m/Y H:i:s');
-					$meuEmail = 'contato@portaldogado.com.br';
+					$meuEmail = 'contato@casadogado.com.br';
 					$assunto = 'Novo cliente cadastrado '.$usuarioNome;
 					$headers = "From: $meuEmail\n";
 					$header .= "content-type: text/html; charset=\"utf-8\"\n\n";
@@ -94,7 +94,7 @@
 					/* Fim email para mim*/	
 					
 					/* Enviando email para usuário*/
-					$clienteAssunto = 'Cadastro com sucesso Portal do Gado';
+					$clienteAssunto = 'Cadastro com sucesso Casa do Gado';
 					$mensagemCliente = "<strong>E-mail de segurança, guarde esse e-mail para consulta!</strong><br />
 					Seus dados são:<br /><br />
 					Login: $usuarioNome<br />
@@ -117,7 +117,7 @@
 					 
 					}catch(PDOexception $error_cadastro)
 					{
-						echo '<h3>Erro ao cadastrar, por favor tente novamente ou nos informe o erro no email contato@portaldogado.com.br</h3>';
+						echo '<h3>Erro ao cadastrar, por favor tente novamente ou nos informe o erro no email contato@casadogado.com.br</h3>';
 					}
 }?>
     </div>    

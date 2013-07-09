@@ -1,9 +1,9 @@
 <div id="pagina">
 	<div class="anuncie">
     
-    <h2>Portal do Gado ajudando você!</h2>
+    <h2>Casa do Gado ajudando você!</h2>
 
-    <p>O Portal do Gado tem o prazer em ajudar nossos clientes a encontrar o que procuram. Caso não encontre me nosso site o que procura 		
+    <p>A Casa do Gado tem o prazer em ajudar nossos clientes a encontrar o que procuram. Caso não encontre me nosso site o que procura 		
     	favor nos informar que localizamos para você, através de nossos parceiros!</p>
     <br/>    <br/>  
      <p><strong>Duvidas? <a href="interno.php?pg=contato.php">Clique aqui!</a></strong></p>

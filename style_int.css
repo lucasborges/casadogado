@@ -581,6 +581,38 @@
 	
 	#pagina .anuncie p a:hover {text-decoration:underline;}
 	
+	
+	
+	#pagina .condicoes{float:left; width:900px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; margin-top:5px;}
+	
+	#pagina .condicoes p {margin:5px 0;}
+	
+	#pagina .condicoes h2 {font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#666;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;}
+	
+	#pagina .condicoes p a{color:blue; text-decoration:none;}
+	
+	#pagina .condicoes p a:hover {text-decoration:underline;}
+	
+	
+	#pagina .parceiros{float:left; width:900px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; margin-top:5px;}
+	
+	#pagina .parceiros p {margin:5px 0;}
+	
+	#pagina .parceiros h2 {font:15px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#666;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;}
+	
+	#pagina .parceiros p a{color:blue; text-decoration:none;}
+	
+	#pagina .parceiros p a:hover {text-decoration:underline;}
+	
+	
 	#pagina .error{font:12px Arial, Helvetica, sans-serif; font-weight:bold;color:#FD5B44;}
 	
 	
