@@ -48,7 +48,7 @@
                         
                         <form name="busca_comum" action="" method="post">
             	<label>
-                	<span> BUSCAR </span>
+                	<span> BUSCAR: </span>
                     
                     <input type="text" onBlur="if (this.value == '') {this.value = 'Digite aqui o que procura...';}" 
 									   onfocus="if (this.value == 'Digite aqui o que procura...') {this.value = '';}" 
