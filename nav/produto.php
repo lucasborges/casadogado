@@ -22,8 +22,10 @@
                 <div id="conteudo_esq_parc"> <!-- Inicio Div Conteudo Parceiros -->
                 	<span> Parceiros </span>
                 	<div id="conteudo_esq_parc_dentro"> <!-- Inicio Div Conteudo Parceiros Dentro -->
-    		                <img src="images/cri_premiacoes.png" />
-	                        <img src="images/premix_premiacoes.png"/>
+    		               <!--<img src="images/cri_premiacoes.png" />-->
+	                        <!--<img src="images/premix_premiacoes.png"/>-->
+                            <img src="images/premix_premiacoes1.jpg"/>
+	                        <img src="images/premix_premiacoes1.jpg"/>
                     </div> <!-- FIM Div Conteudo Parceiros Dentro -->
                 </div> <!-- FIM Div Conteudo Parceiros -->
                 
@@ -53,8 +55,12 @@
             
              
             <div id="conteudo_dir"> <!-- Inicio Div Conteudo Direito-->
-            	
-            	 <?php get_produtoTitulo();//Vem da pasta Funcoes/single funcoes?>
+            	<?php
+					if(isset($_POST['produto'])){
+						$produtoId = $_POST['produto'];
+					}
+				?>
+            	<?php get_produtoTitulo();//Vem da pasta Funcoes/single funcoes?>
                 
                  <ul class="lista">
                      <?php get_produtoInfo();?>   
@@ -64,13 +70,10 @@
                  	 <!-- total de 5 imagens -->
                      <?php get_produtoImagens();?>   
            		</ul> <!--fim Lista Um-->
-                
-                <div id="conteudo_dir_formulario">
-                	<form name="busca_comum" action="" method="post">
-                         <input type="submit" name="Cadastrar" value="" class="btn"/>   
-                         <?php get_produtoPreco();?>   
-                         <!--<h2><span>R$ 4.820,00 ou R$ 4.500,00<br/></span> Compre o lote e pague em até 12 x no cartão ou com desconto à vista.</h2>-->
-	            	</form>     
+                <?php $produtoId = $_GET['produto'];?>
+                <div id="conteudo_dir_formulario">                	
+                         <a href="index.php?pg=comprar.php&lote=<?php echo $produtoId ?>"> <input type="submit" name="Cadastrar" value="" class="btn"/> </a>
+                         <?php //get_produtoPreco();?>   	            	   
                 </div>
                 
                 <div id="conteudo_dir_formulario_interesse">

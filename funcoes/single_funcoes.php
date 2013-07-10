@@ -3,7 +3,12 @@
 	
 		include"Connections/config.php";
 		
-		$produtoId = $_GET['produto'];
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+			} else {
+				$produtoId = $_POST['produto'];
+			}
+		
 						
 		$sql = 'SELECT * FROM portal_produto where produtoID = :produtoId';
 		
@@ -32,7 +37,11 @@
 	
 		include"Connections/config.php";
 		
-		$produtoId = $_GET['produto'];
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+			} else {
+				$produtoId = $_POST['produto'];
+			}
 						
 		$sql = 'SELECT * FROM portal_produto where produtoID = :produtoId';
 		
@@ -45,7 +54,8 @@
 			echo 'Erro ao selecionar anuncios' .$errorSql;
 		}
 		
-		foreach($resultado as $res){			
+		foreach($resultado as $res){	
+			$produtoID		= $res['produtoID'];		
 			$produtoImagem	= $res['produtoImg'];
 			$produtoVideo	= $res['produtoVideo'];
 			$produtoTipo 	= $res['produtoTipo'];
@@ -90,12 +100,15 @@
 		echo '</li>';
 			
 		echo '<li>';
+		echo '<h3><strong>Lote Nº:</strong> '.$produtoID.'</h3>';
 		echo '<h3><strong>Tipo:</strong> '.$produtoTipo.'</h3>';
 		echo '<h3><strong>Idade:</strong>  '.$produtoIdade.'</h2>';
 		echo '<h3><strong>Sexo:</strong>  '.$produtoSexo.'</h2>';
 		echo '<h3><strong>Quantidade:</strong>  '.$produtoQtd.'</h2>';		
 		echo '<h3><strong>Cidade:</strong> '.$produtoCidade.' - '.$produtoEstado.'</h2>';
-		echo '<h3 style="color:;text-decoration:underline;"><strong>Visitado '.$imovelSomaVisitas.' vezes</strong> </h2>';			
+		echo '<h3><strong>Valor à Vista:</strong> '.$produtoValorVista.'</h2>';
+		echo '<h3><strong>Valor à Prazo:</strong> '.$produtoValorPrazo.'</h2>';
+		echo '<h3 style="color:;text-decoration:underline;"><strong>Visitado '.$imovelSomaVisitas.' vezes</strong> </h2>';
 		echo '</li>';
 		}
 	}
@@ -103,10 +116,13 @@
 
 <?php
 	function get_produtoImagens(){	
-	
 		include"Connections/config.php";
 		
-		$produtoId = $_GET['produto'];
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+			} else {
+				$produtoId = $_POST['produto'];
+			}
 						
 		$sql = 'SELECT * FROM portal_midias where produtoId = :produtoId';
 		
@@ -125,8 +141,6 @@
 			echo '<li>';
 			echo '<a href="midias/'.$produtoImagem.'" title="Portal do Gado - Foto Galeria" rel="shadowbox"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=90&w=120&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/></a>';
 			echo '</li>';
-			
-		
 		}
 	}
 ?>
@@ -136,7 +150,11 @@
 	
 		include"Connections/config.php";
 		
-		$produtoId = $_GET['produto'];
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+			} else {
+				$produtoId = $_POST['produto'];
+			}
 						
 		$sql = 'SELECT * FROM portal_produto where produtoID = :produtoId';
 		
@@ -153,7 +171,7 @@
 		foreach($resultado as $res){			
 			$produtoValorVista 	= $res['produtoValorAvista'];
 			$produtoValorPrazo 	= $res['produtoValorPrazo'];
-			echo '<h2><span>R$'. $produtoValorVista .' ou R$'.$produtoValorPrazo.'<br/></span> Compre o lote e pague em até 12 x no cartão ou com desconto à vista.</h2>';
+			//echo '<h2><span>Valor à Vista: R$'. $produtoValorVista .' <br/> Valor à Prazo: R$'.$produtoValorPrazo.'</h2>';
 		}
 	}
 ?>
@@ -163,8 +181,14 @@
 	
 		include"Connections/config.php";
 		
-		$produtoTipo = $_GET['categoria'];
-		$produtoId   = $_GET['produto']; 
+		
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+				$produtoTipo = $_GET['categoria'];
+			} else {
+				$produtoId = $_POST['produto'];
+				$produtoTipo = "Gado de Corte";
+			}
 		
 		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' and  produtoTipo = :produtoTipo ORDER BY RAND() LIMIT 3";
 		
@@ -201,8 +225,13 @@
 	
 		include"Connections/config.php";
 		
-		$produtoTipo = $_GET['categoria'];
-		$produtoId   = $_GET['produto']; 
+		if(isset($_GET['produto'])){
+				$produtoId = $_GET['produto'];
+				$produtoTipo = $_GET['categoria'];
+			} else {
+				$produtoId = $_POST['produto'];
+				$produtoTipo = "Gado de Corte";
+			}
 		
 		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' and  produtoID = :produtoId";
 		

@@ -6,7 +6,7 @@
 <?php include"js/scripts.php";?>
 <?php include"funcoes/single_funcoes.php";?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>.: Casado Gado :.</title>
+<title>.: Casa do Gado :.</title>
 <link href="style_int.css"  rel="stylesheet" type="text/css" />
 <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
 
@@ -55,16 +55,16 @@
                   			 <li><a href="index.php?pg=necessidade.php">INFORME O QUE VOCÊ PRECISA</a></li>
                         </ul>                         
                         
-                        <form name="busca_comum" action="" method="post">
-            	<label>
-                	<span> BUSCAR: </span>
-                    
-                    <input type="text" onBlur="if (this.value == '') {this.value = 'Digite aqui o que procura...';}" 
-									   onfocus="if (this.value == 'Digite aqui o que procura...') {this.value = '';}" 
-										maxlength="100" size="20" value="Digite aqui o que procura..." name="keywords" />
-                    <input type="submit" name="Buscar" value="" class="btn"/>                    
-                </label>
-	            </form>
+                	<form name="busca_comum" action="index.php?pg=produto.php"  enctype="multipart/form-data" method="POST">
+                   		<label>
+                			<span> BUSCAR POR LOTE: </span>
+    	                  	<input type="text" onBlur="if (this.value == '') {this.value = 'Informe o Lote que procura...';}" 
+									   onfocus="if (this.value == 'Informe o Lote que procura...') {this.value = '';}" 
+										maxlength="100" size="20" value="Informe o Lote que procura..." name="produto" />
+	    				  	<input type="submit" name="enviar" value="" class="btn"/>
+                            
+           		 		</label>
+	            	</form>
                     </div>       <!-- FIM Header Imagens Noticias -->
             	</div> <!-- Fim Header Imagens Noticias -->   
             </div><!-- Fim Div Header_topo-->	

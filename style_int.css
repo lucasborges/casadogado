@@ -102,7 +102,7 @@
 							margin-top:8px;
 							margin-right:10px;
 							padding:5px 5px; 
-							width:270px; 
+							width:170px; 
 							font:12px "Trebuchet MS", Arial, Helvetica, sans-serif; 
 							color:#666;; 
 							border:1px solid #669900;}
@@ -596,6 +596,27 @@
 	#pagina .condicoes p a{color:blue; text-decoration:none;}
 	
 	#pagina .condicoes p a:hover {text-decoration:underline;}
+	
+	
+	#conteudo_dir .comprar{float:left; width:900px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; margin-top:5px;}
+	
+	#conteudo_dir .comprar p {margin:5px 0;
+					font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#666;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;
+					text-align:justify;}
+	
+	#conteudo_dir .comprar h2 {font:20px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+					color:#336600;				
+					text-shadow:1px 1px #fff;
+					padding-bottom:10px;	
+					font-weight:bold;}
+	
+	#conteudo_dir .comprar p a{color:blue; text-decoration:none;}
+	
+	#conteudo_dir .comprar p a:hover {text-decoration:underline;}
 	
 	
 	#pagina .parceiros{float:left; width:900px;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; margin-top:5px;}

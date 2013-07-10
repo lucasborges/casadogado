@@ -160,17 +160,17 @@ if (isset($_POST['email'])) {
                	   <li><a href="index.php?pg=anuncie.php">CADASTRE-SE GRÁTIS</a> </li>                                
                    <li><a href="index.php?pg=necessidade.php">INFORME O QUE VOCÊ PRECISA</a></li>
              	</ul>
-                
-                 <form name="busca_comum" action="index.php?pg=search" method="get">
-                 
-                  <label>
-                	<span> BUSCAR: </span>
-                	 <input type="text" onblur="if (this.value == '') {this.value = 'Digite aqui o que procura...';}" 
-									   onfocus="if (this.value == 'Digite aqui o que procura...') {this.value = '';}" 
-										maxlength="100" size="20" value="Digite aqui o que procura..." name="p" />
-                         <input type="submit" name="Buscar" value="" class="btn"/>                    
-           		 </label>
-	            </form>
+              
+       				<form name="busca_comum" action="index.php?pg=produto.php"  enctype="multipart/form-data" method="POST">
+                   		<label>
+                			<span> BUSCAR POR LOTE: </span>
+    	                  	<input type="text" onBlur="if (this.value == '') {this.value = 'Informe o Lote que procura...';}" 
+									   onfocus="if (this.value == 'Informe o Lote que procura...') {this.value = '';}" 
+										maxlength="100" size="20" value="Informe o Lote que procura..." name="produto" />
+	    				  	<input type="submit" name="enviar" value="" class="btn"/>
+                            
+           		 		</label>
+	            	</form>
         	</div>
           	<!--  FIM Header Navegar-->
 </div> <!-- Fim Div header -->

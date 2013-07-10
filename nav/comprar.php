@@ -1,6 +1,5 @@
-<div id="conteudo"> <!-- Inicio Div Conteudo -->
+   <div id="conteudo"> <!-- Inicio Div Conteudo -->
         	<div id="conteudo_esq"> <!-- Inicio Div Conteudo Esquerdo -->
-            
             	<div id="conteudo_esq_categ"> <!-- Inicio Div Conteudo Esquerdo Categoria-->
                 	<span> Categorias </span>
                 	<div id="conteudo_esq_categ_dentro"> <!-- Inicio Div Conteudo Esquerdo Categoria Dentro-->
@@ -23,7 +22,7 @@
                 <div id="conteudo_esq_parc"> <!-- Inicio Div Conteudo Parceiros -->
                 	<span> Parceiros </span>
                 	<div id="conteudo_esq_parc_dentro"> <!-- Inicio Div Conteudo Parceiros Dentro -->
-    		                <!--<img src="images/cri_premiacoes.png" />-->
+    		               <!--<img src="images/cri_premiacoes.png" />-->
 	                        <!--<img src="images/premix_premiacoes.png"/>-->
                             <img src="images/premix_premiacoes1.jpg"/>
 	                        <img src="images/premix_premiacoes1.jpg"/>
@@ -50,46 +49,17 @@
                 </div> <!-- FIM Div Conteudo Esquerdo News-->
                 
                 <div id="conteudo_esq_fb"> <!-- Inicio Div Conteudo Esquerdo Facebook -->
-                	<div class="fb-like-box" data-href="https://www.facebook.com/casadogado.com.br" data-width="230" data-height="390" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
+                 <div class="fb-like-box" data-href="https://www.facebook.com/casadogado.com.br" data-width="230" data-height="390" data-show-faces="true" data-stream="false" data-show-border="false" data-header="true"></div>
                 </div> <!-- Fim Div Conteudo Esquerdo Facebook -->                
             </div><!-- FIM Div Conteudo Esquerdo -->
             
+             
             <div id="conteudo_dir"> <!-- Inicio Div Conteudo Direito-->
-            	<h7> Categoria </h7>   
-                  <table width="100%" border="0" cellpadding="4" cellspacing="4" style="float:left;">                    
-                    <tr  style="color:#336600;font-variant:small-caps;font:14px 'Trebuchet MS', Arial, Helvetica, sans-serif;">
-                        <td align="center" bgcolor="#E9E9E9"><strong>Ilustração</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Tipo de Gado</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Sexo</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Quantidade</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Idade</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Cidade</strong></td>
-                        <td align="center" bgcolor="#E9E9E9"><strong>Acessar</strong></td>
-                    </tr>
-                     <?php get_produtoCategoria();?>                    
-                  </table>	
-                  
-                  <div class="paginator">
-                    <a href="#"> Primeira </a>
-                    <a href="#"> 1 </a>
-                    <a href="#"> 2 </a>
-                    <a href="#"> 3 </a>
-                    <a href="#"> 4 </a>
-                    <a href="#"> 5 </a>
-                    <a href="#"> 6 </a>
-                    <a href="#"> 7 </a>
-                    <a href="#"> 8 </a>
-                    <a href="#"> 9 </a>
-                    <a href="#"> 10 </a>
-                    <a href="#"> Última</a>
-                  </div>
-                  
-                   <h7>Você poderá se interessar também por</h7>
-                <!-- Inicio Lista Dois -->
-                <ul class="lista_dois">
-	               <?php portal_homePostFooter();?>
-                </ul>  
-                <!-- Fim Lista Dois -->    
-                  <label> <a href="#"> VER MAIS OFERTAS >> </a></label>
+            	<div class="comprar">
+                 <h2>Obrigado por mostrar interesse em nossos produtos.</h2>
+                 <p> Para finalizar a sua compra entre em contato e teremos o prazer em atende-lôs</p>
+                </div>
+            	
             </div> <!-- Fim Div Conteudo Direito-->
-</div><!-- FIM Div Conteudo -->
+          
+        </div><!-- FIM Div Conteudo -->
