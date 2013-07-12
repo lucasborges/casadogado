@@ -1,9 +1,9 @@
 <?php
 
 $hostname_painel_config = "mysql.casadogado.com.br";
-$database_painel_config = "casadogado_www";
+$database_painel_config = "casadogado";
 $username_painel_config = "casadogado";
-$password_painel_config = "1q2w3e4r";
+$password_painel_config = "Vaca30@";
 /*
 $hostname_painel_config = "localhost";
 $database_painel_config = "portaldogado";

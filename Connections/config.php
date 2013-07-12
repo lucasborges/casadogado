@@ -1,9 +1,9 @@
 <?php
 
 define('HOST','mysql.casadogado.com.br');
-define('DB','casadogado_www');
+define('DB','casadogado');
 define('USER','casadogado');
-define('PASS','1q2w3e4r');
+define('PASS','Vaca30@');
 /*
 define('HOST','localhost');
 define('DB','portaldogado');
