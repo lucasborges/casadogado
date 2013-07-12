@@ -1,5 +1,5 @@
 <?php
-define('HOST','mysql.casadogado.com.br');
+define('HOST','localhost');
 define('DB','casadogado');
 define('USER','casadogado');
 define('PASS','Vaca30@');

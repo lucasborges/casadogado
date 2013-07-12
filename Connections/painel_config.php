@@ -1,5 +1,5 @@
 <?php
-$hostname_painel_config = "mysql.casadogado.com.br";
+$hostname_painel_config = "localhost";
 $database_painel_config = "casadogado";
 $username_painel_config = "casadogado";
 $password_painel_config = "Vaca30@";
