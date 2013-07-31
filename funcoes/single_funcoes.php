@@ -20,12 +20,16 @@
 		}catch(PDOexception $errorSql){
 			echo 'Erro ao selecionar anuncios' .$errorSql;
 		}
-		
+		$produtoTitulo = '';		
 		foreach($resultado as $res){			
-			$produtoTitulo	= $res['produtoTitulo'];
-			
+			$produtoTitulo	= $res['produtoTitulo'];			
 			echo '<h7>'.$produtoTitulo.'</h7>';
 		}
+		
+		if ($produtoTitulo == ''){
+			echo '<h8> Lote não encontrado.</h8>';
+		}
+		
 	}
 ?>
 
@@ -54,6 +58,7 @@
 			echo 'Erro ao selecionar anuncios' .$errorSql;
 		}
 		
+		$produtoID = '';
 		foreach($resultado as $res){	
 			$produtoID		= $res['produtoID'];		
 			$produtoImagem	= $res['produtoImg'];
@@ -84,32 +89,32 @@
 //echo '<li>';
 //echo '<img src="timthumb.php?src=midias/'.$produtoImagem.'&h=270&w=400&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/>';
 //echo '</li>';
-					
-		echo '<li>';	
-		echo '<div id="container">Loading the player ...</div>';
-		echo '<script type="text/javascript">';
-		echo 'jwplayer("container").setup(';
-		echo '{';
-		echo 'flashplayer: "js/jwplayer/player.swf",';
-		echo 'file: "videos/'.$produtoVideo.'",';
-		echo 'height: 270,';
-		echo 'width: 400,';
-		echo 'skin: "/skins/modieus/modieus.zip"';
-		echo '});';
-		echo '</script>';
-		echo '</li>';
-			
-		echo '<li>';
-		echo '<h3><strong>Lote Nº:</strong> '.$produtoID.'</h3>';
-		echo '<h3><strong>Tipo:</strong> '.$produtoTipo.'</h3>';
-		echo '<h3><strong>Idade:</strong>  '.$produtoIdade.'</h2>';
-		echo '<h3><strong>Sexo:</strong>  '.$produtoSexo.'</h2>';
-		echo '<h3><strong>Quantidade:</strong>  '.$produtoQtd.'</h2>';		
-		echo '<h3><strong>Cidade:</strong> '.$produtoCidade.' - '.$produtoEstado.'</h2>';
-		echo '<h3><strong>Valor à Vista:</strong> '.$produtoValorVista.'</h2>';
-		echo '<h3><strong>Valor à Prazo:</strong> '.$produtoValorPrazo.'</h2>';
-		echo '<h3 style="color:;text-decoration:underline;"><strong>Visitado '.$imovelSomaVisitas.' vezes</strong> </h2>';
-		echo '</li>';
+		if ($produtoID != ''){			
+			echo '<li>';	
+			echo '<div id="container">Loading the player ...</div>';
+			echo '<script type="text/javascript">';
+			echo 'jwplayer("container").setup(';
+			echo '{';
+			echo 'flashplayer: "js/jwplayer/player.swf",';
+			echo 'file: "videos/'.$produtoVideo.'",';
+			echo 'height: 270,';
+			echo 'width: 400,';
+			echo '});';
+			echo '</script>';
+			echo '</li>';
+				
+			echo '<li>';
+			echo '<h3><strong>Lote Nº:</strong> '.$produtoID.'</h3>';
+			echo '<h3><strong>Tipo:</strong> '.$produtoTipo.'</h3>';
+			echo '<h3><strong>Idade:</strong>  '.$produtoIdade.'</h2>';
+			echo '<h3><strong>Sexo:</strong>  '.$produtoSexo.'</h2>';
+			echo '<h3><strong>Quantidade:</strong>  '.$produtoQtd.'</h2>';		
+			echo '<h3><strong>Cidade:</strong> '.$produtoCidade.' - '.$produtoEstado.'</h2>';
+			echo '<h3><strong>Valor à Vista:</strong> '.$produtoValorVista.'</h2>';
+			echo '<h3><strong>Valor à Prazo:</strong> '.$produtoValorPrazo.'</h2>';
+			echo '<h3 style="color:;text-decoration:underline;"><strong>Visitado '.$imovelSomaVisitas.' vezes</strong> </h2>';
+			echo '</li>';
+		}
 		}
 	}
 ?>

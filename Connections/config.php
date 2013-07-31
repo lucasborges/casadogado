@@ -1,14 +1,15 @@
 <?php
+/*
 define('HOST','localhost');
 define('DB','casadogado');
 define('USER','casadogado');
 define('PASS','Vaca30@');
-/*
+*/
 define('HOST','localhost');
 define('DB','portaldogado');
 define('USER','root');
 define('PASS','');
-*/
+
 $conexao = 'mysql:host='.HOST.';dbname='.DB;
 try{
 		$conecta = new PDO($conexao,USER,PASS);

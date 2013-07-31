@@ -32,9 +32,8 @@
 				$imgPermitido		= array('image/jpg','image/jpeg','image/pjpg','IMAGE/JPG','IMAGE/JPEG','IMAGE/PJPG');
 				$extension = end(explode(".", $_FILES["img"]["name"]));
 				
-				if (strtoupper($extension) != "JPG" && strtoupper($extension) != "JPEG" && strtoupper($extension) != "PJPG"){
-				echo('<h3 class="no"> <strong>Volte o navegador e cadastre um video permitido para continuar seu cadastro!</strong> </h3><br\>');
-				echo '<br\><label style="color: blue;">Extensões permitidas: .mov , .avi , .flv , .mpg , .wmv , .3gp e .rm ! </label>';
+				if (strtoupper($extension) != "JPG" && strtoupper($extension) != "JPEG" && strtoupper($extension) != "PJPG"){echo('<h3 class="no"><strong>Volte o navegador e cadastre um video permitido para continuar seu cadastro!</strong> </h3><br\>');
+echo '<br\><label style="color: blue;">Extensões permitidas: .mov , .avi , .flv , .mpg , .wmv , .3gp e .rm ! </label>';
 				die();
 				} 
 					
@@ -59,8 +58,8 @@
 				if (strtoupper($extension) != "MOV" && strtoupper($extension != "AVI") && strtoupper($extension) != "FLV" 
 				&& strtoupper($extension != "MPG") && strtoupper($extension) != "WMV" && strtoupper($extension) != "3GP" 
 				&& strtoupper($extension) != "RM"){
-				echo('<h3 class="no"> <strong>Volte o navegador e cadastre um video permitido para continuar seu cadastro!</strong> </h3><br\>');
-					echo '<br\><label style="color: blue;">Extensões permitidas: .mov , .avi , .flv , .mpg , .wmv , .3gp e .rm ! </label>';
+echo('<h3 class="no"><strong>Volte o navegador e cadastre um video permitido para continuar seu cadastro!</strong> </h3><br\>');
+echo '<br\><label style="color: blue;">Extensões permitidas: .mov , .avi , .flv , .mpg , .wmv , .3gp e .rm ! </label>';
 					die();
 				}
 				
@@ -292,12 +291,9 @@
 		}
 		
 		foreach($resultado_buscaImagem as $resImagem){
-			$midiaId = $resImagem['midiaId'];
-			$produtoMidia = $resImagem['produtoMidia'];
+			$midiaId 		= $resImagem['midiaId'];
+			$produtoMidia 	= $resImagem['produtoMidia'];
 			$produtoId		=$resImagem['produtoId'];
-			
-			
-		
 	?>
            <div class="galeria_cadastro"> <!-- Galeria Cadastro -->
                         <span class="imagem"> <img src="../midias/<?php echo $produtoMidia?>" width="100" alt="Exibição" /></	

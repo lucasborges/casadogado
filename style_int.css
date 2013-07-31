@@ -23,7 +23,6 @@
 					height:28px; 
 					float:right;
 					background:#FFCC00;
-
 					}
 	
 	#header_contato label{	
@@ -193,6 +192,11 @@
 						float:left;
 						font:25px "Trebuchet MS", Arial, Helvetica, sans-serif;
 						color:#346700; 
+						font-weight:bold; }
+	#conteudo_dir h8 {	width:690px; 
+						float:left;
+						font:25px "Trebuchet MS", Arial, Helvetica, sans-serif;
+						color:blue; 
 						font-weight:bold; }
 						
 						
