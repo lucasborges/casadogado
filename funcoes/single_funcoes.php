@@ -316,6 +316,19 @@
 			echo 'Erro ao selecionar anuncios' .$errorSql;
 		}
 		
+		if (sizeof($resultado) > 0){
+		echo'<h7> Categoria </h7>';
+		echo'<table width="100%" border="0" cellpadding="4" cellspacing="4" style="float:left;">';
+		echo'<tr  style="color:#336600;font-variant:small-caps;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;">';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Ilustração</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Tipo de Gado</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Sexo</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Quantidade</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Idade</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Cidade</strong></td>';
+		echo'<td align="center" bgcolor="#E9E9E9"><strong>Acessar</strong></td>';
+		echo'</tr>';
+		$produtoTipo = '';
 		foreach($resultado as $res){
 			$produtoTipo 	= $res['produtoTipo'];
 			$produtoSexo 	= $res['produtoSexo'];
@@ -342,7 +355,9 @@
 			echo '<tr> </tr>';
 		}
 		echo '</table>';
-		
+		} else { // Else if size of
+			echo'<h6> Não existe nenhum produto cadastrado da categoria: <b>'.$categoria.'</b> </h6>';
+		}
 		
 		$sql_res = "SELECT * FROM portal_produto where produtoTipo = :categoria ORDER BY produtoID desc";
 

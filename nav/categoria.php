@@ -55,7 +55,7 @@
             </div><!-- FIM Div Conteudo Esquerdo -->
             
             <div id="conteudo_dir"> <!-- Inicio Div Conteudo Direito-->
-            	<h7> Categoria </h7>   
+            	<!--<h7> Categoria </h7>   
                   <table width="100%" border="0" cellpadding="4" cellspacing="4" style="float:left;">                    
                     <tr  style="color:#336600;font-variant:small-caps;font:14px 'Trebuchet MS', Arial, Helvetica, sans-serif;">
                         <td align="center" bgcolor="#E9E9E9"><strong>Ilustração</strong></td>
@@ -66,18 +66,17 @@
                         <td align="center" bgcolor="#E9E9E9"><strong>Cidade</strong></td>
                         <td align="center" bgcolor="#E9E9E9"><strong>Acessar</strong></td>
                     </tr>
-                               
+                    -->           
 					<?php 
 					// funcoes/single_funcoes
 					get_produtoCategoria();
 					?>       
-                  
-                   <h7>Você poderá se interessar também por</h7>
-                <!-- Inicio Lista Dois -->
-                <ul class="lista_dois">
-	               <?php portal_homePostFooter();?>
-                </ul>  
-                <!-- Fim Lista Dois -->    
-                  <label> <a href="#"> VER MAIS OFERTAS >> </a></label>
-            </div> <!-- Fim Div Conteudo Direito-->
+               		 <h7>Você poderá se interessar também por</h7>
+                	<!-- Inicio Lista Dois -->
+               		<ul class="lista_dois">                
+	              		 <?php portal_homePostFooter();?>
+               		</ul>  
+                	<!-- Fim Lista Dois -->    
+                  	<label> <a href="#"> VER MAIS OFERTAS >> </a></label>
+                   </div> <!-- Fim Div Conteudo Direito-->
 </div><!-- FIM Div Conteudo -->

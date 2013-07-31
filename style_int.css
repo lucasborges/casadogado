@@ -199,6 +199,11 @@
 						color:blue; 
 						font-weight:bold; }
 						
+	#conteudo_dir h6 {	width:690px; 
+						float:left;
+						font:15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+						color:blue; 
+						}				
 						
 						
 	#conteudo_dir td a {font:12px Arial, Helvetica, sans-serif; color:#333; text-decoration:none; text-align:left; 		
