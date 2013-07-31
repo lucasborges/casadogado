@@ -38,7 +38,7 @@
 			 $pag = '1';
 		}
 							
-		$maximo = '15'; //RESULTADOS POR PÁGINA
+		$maximo = '10'; //RESULTADOS POR PÁGINA
 		$inicio = ($pag * $maximo) - $maximo;
 						
 		$emailStatus = 'completo';
@@ -87,15 +87,22 @@
 <?php
 
 include("../Connections/painel_config.php");
+	$sql_res = "select * from portal_mailadmin where emailStatus = 'completo' order by emailData asc";
 
-//USE A MESMA SQL QUE QUE USOU PARA RECUPERAR OS RESULTADOS
-//SE TIVER A PROPRIEDADE WHERE USE A MESMA TAMBÉM
+	try{
+			$query = $conecta->prepare($sql_res);
+			$query->execute();
+			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+			
+		}catch(PDOexception $errorSql){
+			echo 'Erro ao selecionar anuncios' .$errorSql;
+		}
+		
+	$total = sizeof($resultado); // Quantidade de registros pra paginação
+	$paginas = ceil($total/$maximo);
+	$links = '5'; //QUANTIDADE DE LINKS NO PAGINATOR
 
-$sql_res = mysql_query("select * from portal_mailadmin where emailStatus = 'completo' order by emailData asc");
-$sql_res->execute();
-$total = mysql_num_rows($sql_res);
-$paginas = ceil($total/$maximo);
-$links = '5'; //QUANTIDADE DE LINKS NO PAGINATOR
+
 
 echo "<a href=\"painel.php?exe=adminInbox/completos&amp;pag=1\">Primeira Página</a>&nbsp;&nbsp;&nbsp;";
 

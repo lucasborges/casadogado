@@ -258,13 +258,54 @@
 ?>
 
 <?php
-	function get_produtoCategoria(){	
+	function portal_homePostFooter(){	
 	
 		include"Connections/config.php";
+		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' ORDER BY RAND() LIMIT 6";
 		
+		try{
+			$query = $conecta->prepare($sql);
+			$query->execute();
+			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+		}catch(PDOexception $errorSql){
+			echo 'Erro ao selecionar anuncios';
+		}
+		
+		foreach($resultado as $res){
+			$produtoTipo 	= $res['produtoTipo'];
+			$produtoSexo 	= $res['produtoSexo'];
+			$produtoIdade	= $res['produtoIdade'];
+			$produtoCidade	= $res['produtoCidade'];
+			$produtoEstado	= $res['produtoEstado'];
+			$produtoImagem	= $res['produtoImg'];
+			$produtoTitulo	= $res['produtoTitulo'];
+			$produtoId		= $res['produtoID'];
+			echo '<li>';					
+			echo '<span style="float:left;"><a href="midias/'.$produtoImagem.'" title="Portal do Gado - Foto Galeria" rel="shadowbox"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=90&w=120&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/> </a></span>';	
+			echo '<h2>'.$produtoTipo.'</h2>  <br/>';
+			echo '<h3>'.$produtoCidade.' - '.$produtoEstado.'</h3>';
+			echo '<a href="interno.php?pg=produto.php&produto='.$produtoId.'&categoria='.$produtoTipo.'"><img src="images/oferta_btn.png" alt="" title= "" border="0"/></a> ';
+			echo '</li>';
+		}
+	}
+?>
+
+
+<?php
+	function get_produtoCategoria(){
+		include"Connections/config.php";
+		
+		$pag = "$_GET[pag]";
+		if($pag >= '1'){
+			 $pag = $pag;
+		}else{
+			 $pag = '1';
+		}
+							
+		$maximo = '10'; //RESULTADOS POR PÁGINA
+		$inicio = ($pag * $maximo) - $maximo;
 		$categoria = $_GET['categoria'];
-						
-		$sql = 'SELECT * FROM portal_produto where produtoTipo = :categoria ORDER BY produtoID desc LIMIT 10';
+		$sql = 'SELECT * FROM portal_produto where produtoTipo = :categoria ORDER BY produtoID desc limit '.$inicio.','.$maximo;
 		
 		try{
 			$query = $conecta->prepare($sql);
@@ -300,38 +341,44 @@
 			echo '<tr> </tr>';
 			echo '<tr> </tr>';
 		}
-	}
-?>
-
-<?php
-	function portal_homePostFooter(){	
-	
-		include"Connections/config.php";
-		$sql = "SELECT * FROM portal_produto where produtoStatus = 'ativos' ORDER BY RAND() LIMIT 6";
+		echo '</table>';
 		
-		try{
-			$query = $conecta->prepare($sql);
+		
+		$sql_res = "SELECT * FROM portal_produto where produtoTipo = :categoria ORDER BY produtoID desc";
+
+	try{
+			$query = $conecta->prepare($sql_res);
+			$query->bindValue(':categoria',$categoria,PDO::PARAM_STR);
 			$query->execute();
 			$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+			
 		}catch(PDOexception $errorSql){
-			echo 'Erro ao selecionar anuncios';
+			echo 'Erro ao selecionar anuncios' .$errorSql;
 		}
 		
-		foreach($resultado as $res){
-			$produtoTipo 	= $res['produtoTipo'];
-			$produtoSexo 	= $res['produtoSexo'];
-			$produtoIdade	= $res['produtoIdade'];
-			$produtoCidade	= $res['produtoCidade'];
-			$produtoEstado	= $res['produtoEstado'];
-			$produtoImagem	= $res['produtoImg'];
-			$produtoTitulo	= $res['produtoTitulo'];
-			$produtoId		= $res['produtoID'];
-			echo '<li>';					
-			echo '<span style="float:left;"><a href="midias/'.$produtoImagem.'" title="Portal do Gado - Foto Galeria" rel="shadowbox"><img src="timthumb.php?src=midias/'.$produtoImagem.'&h=90&w=120&zc=1" alt="'.$produtoTitulo.'" title="'.$produtoTitulo.'" border="0"/> </a></span>';	
-			echo '<h2>'.$produtoTipo.'</h2>  <br/>';
-			echo '<h3>'.$produtoCidade.' - '.$produtoEstado.'</h3>';
-			echo '<a href="interno.php?pg=produto.php&produto='.$produtoId.'&categoria='.$produtoTipo.'"><img src="images/oferta_btn.png" alt="" title= "" border="0"/></a> ';
-			echo '</li>';
+		$total = sizeof($resultado); // Quantidade de registros pra paginação
+		$paginas = ceil($total/$maximo);
+		$links = '5'; //QUANTIDADE DE LINKS NO PAGINATOR
+		if($total > $maximo){
+			echo "<div class='paginator'><a href=\"index.php?pg=categoria.php&categoria=$categoria&amp;pag=1\">Primeira Página</a>&nbsp;&nbsp;&nbsp;</div>";
+
+	for ($i = $pag-$links; $i <= $pag-1; $i++){
+		if ($i <= 0){
+		}else{
+			echo"<div class='paginator'><a href=\"index.php?pg=categoria.php&categoria=$categoria&amp;pag=$i\">$i</a>&nbsp;&nbsp;&nbsp;</div>";
 		}
+	}
+	
+	echo"<div class='paginator'> $pag &nbsp;&nbsp;&nbsp;</div>";
+
+	for($i = $pag +1; $i <= $pag+$links; $i++){
+		if($i > $paginas){
+		}else{
+			echo "<div class='paginator'><a href=\"index.php?pg=categoria.php&categoria=$categoria&amp;pag=$i\">$i</a>&nbsp;&nbsp;&nbsp;</div>";
+		}
+	}
+echo "<div class='paginator'><a href=\"index.php?pg=categoria.php&categoria=$categoria&amp;pag=$paginas\">Última página</a>&nbsp;&nbsp;&nbsp;</div>";
+			}
+
 	}
 ?>

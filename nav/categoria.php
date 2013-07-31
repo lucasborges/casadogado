@@ -66,23 +66,11 @@
                         <td align="center" bgcolor="#E9E9E9"><strong>Cidade</strong></td>
                         <td align="center" bgcolor="#E9E9E9"><strong>Acessar</strong></td>
                     </tr>
-                     <?php get_produtoCategoria();?>                    
-                  </table>	
-                  
-                  <div class="paginator">
-                    <a href="#"> Primeira </a>
-                    <a href="#"> 1 </a>
-                    <a href="#"> 2 </a>
-                    <a href="#"> 3 </a>
-                    <a href="#"> 4 </a>
-                    <a href="#"> 5 </a>
-                    <a href="#"> 6 </a>
-                    <a href="#"> 7 </a>
-                    <a href="#"> 8 </a>
-                    <a href="#"> 9 </a>
-                    <a href="#"> 10 </a>
-                    <a href="#"> Última</a>
-                  </div>
+                               
+					<?php 
+					// funcoes/single_funcoes
+					get_produtoCategoria();
+					?>       
                   
                    <h7>Você poderá se interessar também por</h7>
                 <!-- Inicio Lista Dois -->

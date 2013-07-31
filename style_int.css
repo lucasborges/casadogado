@@ -206,10 +206,10 @@
 								
 	#conteudo_dir td a:hover{font-weight:bold;text-decoration:underline;font:12px Arial, Helvetica, sans-serif; color:#333;} 	
 	
-	#conteudo_dir .paginator {display:block;margin:10px 0 5px 0; float:right; height:20px; margin-bottom: 30px;}
-	
-	#conteudo_dir .paginator a {font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:2px 5px; margin:0 1px;border:none;text-decoration:none;color:#346700; display:inline;}
+	#conteudo_dir .paginator {display:inline-block; height:20px; margin-top:10px; margin-bottom: 30px;}	
+	#conteudo_dir .paginator a {font: 13px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:2px 5px; margin:0 1px;border:none;text-decoration:none;color:#346700;}
 	#conteudo_dir .paginator a:hover {text-decoration:none;color:#346700; background:#FFF;font-weight:bold;}
+	
 	#conteudo_dir h2 {text-decoration:none;color:#346700;font-weight:bold;font:12px Arial, Helvetica, sans-serif; }	
 						
 	#conteudo_dir .lista{list-style:none; float:left; width:860px; margin-bottom:5px; padding-bottom:10px; text-decoration:none; border-bottom: 1px dotted #CCCCCC;width:690px;}
